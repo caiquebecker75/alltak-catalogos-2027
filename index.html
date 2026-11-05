@@ -2,495 +2,511 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<meta id="versaoDeck" content="4">
-<title>Alltak × 75 LAB · Catálogos 2027</title>
-<meta name="description" content="Cenário dos catálogos Alltak: o acordado, o realizado, o pedido e três caminhos para 2027.">
-<link rel="icon" href="assets/caveira-simbolo.png">
+<meta id="versaoDeck" content="5">
+<title>Alltak × 75 LAB · Primeiro fechar. Depois crescer.</title>
+<meta name="description" content="Catálogos Alltak: por que terminar o contrato ativo até fevereiro é o caminho mais barato para o contrato novo.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --blue:#0080FF;--blue-deep:#0062C4;--blue-soft:#D9EBFF;
-  --navy:#00205B;--navy2:#001845;--navy3:#000F2E;
-  --cream:#F1F1DE;--cream2:#E4E4CC;--paper:#FAFAF2;
-  --ink:#06090F;--ink2:#0D131F;--ink3:#152033;
-  --mute:#A6B4CC;--mute2:#6B7B98;
-  --line:rgba(255,255,255,.14);
-  --dk:#0B1220;--dk2:#4A5468;--dkline:rgba(6,9,15,.14);
-  --lime:#C0EE4E;--gold:#B49A5E;--orange:#F4711F;
-  --ease:cubic-bezier(.16,.84,.28,1);
-  --trap:polygon(4% 0,96% 0,100% 100%,0 100%);
-}
+:root{--ink:#050505;--ink-2:#101013;--ink-3:#17171c;--paper:#F2F1E9;--paper-2:#E7E5DA;--lime:#C0EE4E;--azul:#0080FF;--azul-esc:#0062C4;--marinho:#00205B;--titulo:'Big Shoulders Display',Impact,sans-serif;--corpo:'Space Grotesk',system-ui,sans-serif;--mono:'Space Mono',ui-monospace,monospace;--fio:rgba(5,5,5,.16);--fio-c:rgba(242,241,233,.18)}
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%;overflow:hidden;background:var(--ink)}
-body{font-family:Archivo,system-ui,sans-serif;color:var(--cream);-webkit-font-smoothing:antialiased;cursor:none}
-button{font:inherit;color:inherit;background:none;border:0;cursor:none;text-align:left}
-a{color:inherit;text-decoration:none;cursor:none}
-:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
-svg.i{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
-
-/* cursor em dois tons: aparece sobre todas as cores da marca */
-#cur,#dot{position:fixed;top:0;left:0;pointer-events:none;z-index:9999}
-#cur{width:38px;height:38px;margin:-19px 0 0 -19px;border-radius:50%;border:2px solid var(--navy3);box-shadow:0 0 0 1.5px #fff,inset 0 0 0 1.5px #fff;transition:width .3s var(--ease),height .3s var(--ease),margin .3s var(--ease)}
-#dot{width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:var(--navy3);box-shadow:0 0 0 2px #fff}
-body.hot #cur{width:58px;height:58px;margin:-29px 0 0 -29px}
-body.hidecur #cur,body.hidecur #dot{opacity:0}
-@media (hover:none){body,button,a{cursor:auto}#cur,#dot{display:none}}
-
-/* palco */
-#deck{position:fixed;inset:0;overflow:clip;background:var(--ink)}
+html,body{height:100%;background:var(--ink);overflow:hidden;color:var(--paper);font-family:var(--corpo);-webkit-font-smoothing:antialiased}
+body.tem-mouse,body.tem-mouse *{cursor:none!important}
+#wrap{position:fixed;inset:0;overflow:clip;background:var(--ink)}
 #stage{position:absolute;left:50%;top:50%;width:1600px;height:900px;margin:-450px 0 0 -800px;transform-origin:center;overflow:clip}
-.slide{position:absolute;inset:0;display:none;flex-direction:column;padding:90px 96px 108px;background:var(--ink);overflow:clip}
-.slide.on{display:flex}
-.slide.navy{background:var(--navy)}
-.slide.light{background:var(--cream);color:var(--dk)}
-.slide.blue{background:var(--blue);color:#fff}
-.slide>*{position:relative;z-index:2}
-.slide.on [data-a]{animation:up .6s var(--ease) both;animation-delay:calc(var(--d,0)*60ms + 120ms)}
-@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-.pdf .slide [data-a]{animation:none!important}
-
-/* barra de cima e de baixo */
-#top,#bot{position:absolute;left:96px;right:96px;z-index:70;display:flex;align-items:center;gap:16px}
-#top{top:0;height:70px}
-#bot{bottom:0;height:68px}
-.marca{display:flex;align-items:center;gap:13px}
-.marca img.es{height:30px}
-.marca img.w{height:21px}
-.marca b{font-size:13px;font-weight:700;opacity:.65}
-.sp{flex:1}
-.btn-pdf{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:800;padding:8px 14px;border:1.5px solid currentColor;border-radius:3px}
-.btn-pdf svg{width:15px;height:15px}
-#cont{font-size:13px;font-weight:800;font-variant-numeric:tabular-nums;opacity:.75}
-#trilha{display:flex;gap:6px;flex:1}
-#trilha button{flex:1;padding:9px 0 0;border-top:3px solid currentColor;font-size:12px;font-weight:700;opacity:.4;white-space:nowrap}
-#trilha button.on{opacity:1}
-.seta{width:38px;height:38px;display:grid;place-items:center;border:1.5px solid currentColor;border-radius:50%}
-.tema-light #top,.tema-light #bot{color:var(--dk)}
-.tema-dark #top,.tema-dark #bot{color:var(--cream)}
-
-/* tipografia */
-.k{display:block;font-size:14px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
-h1,h2,h3{font-stretch:112%;font-weight:800;letter-spacing:-.015em}
-h2{font-size:54px;line-height:1.04;margin-top:10px}
-.fonte{position:absolute!important;left:96px;right:96px;bottom:74px;font-size:11.5px;line-height:1.3;opacity:.62;z-index:3}
-.cta{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:800;color:var(--blue)}
-.pdf .cta{display:none}
-.num{font-variant-numeric:tabular-nums;font-stretch:112%;font-weight:800}
+.slide{position:absolute;inset:0;overflow:clip;opacity:0;visibility:hidden;transition:opacity .5s ease,visibility .5s}
+.slide.on{opacity:1;visibility:visible}
+.claro{background:var(--paper);color:var(--ink)}
+.escuro{background:var(--ink-2);color:var(--paper)}
+.marinho{background:var(--marinho);color:var(--paper)}
+.azul{background:var(--azul);color:#fff}
+.lime{background:var(--lime);color:var(--ink)}
+.grao{position:absolute;inset:0;pointer-events:none;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.eb{font-family:var(--mono);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.eb b{color:var(--azul)}
+.escuro .eb b,.marinho .eb b,.capa .eb b{color:var(--lime)}
+.azul .eb b{color:var(--ink)}
+.lime .eb b{color:var(--marinho)}
+h1,h2,.num{font-family:var(--titulo);font-weight:900;text-transform:uppercase;letter-spacing:-.02em;line-height:1.04}
+h3{font-family:var(--titulo);font-weight:900;text-transform:uppercase;letter-spacing:-.01em;line-height:1.04}
+.ap{opacity:.38}
+.ca{color:var(--azul)}
+.cl{color:var(--lime)}
+.fonte{position:absolute;left:96px;bottom:26px;font:400 11px/1.45 var(--mono);opacity:.62;width:1160px}
+.topo{position:absolute;top:32px;left:96px;right:96px;display:flex;align-items:center;justify-content:space-between;z-index:5}
+.par{display:flex;align-items:center;gap:14px}
+.par img.a{height:40px;display:block}
+.par img.l{height:24px;display:block}
+.par i{font:400 12px var(--mono);opacity:.6;font-style:normal}
+.topo .dir{display:flex;align-items:center;gap:22px}
+.btn-pdf{font:700 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;padding:8px 12px;border:2px solid currentColor;color:inherit;text-decoration:none;background:none;transition:transform .2s,background .2s,color .2s}
+.btn-pdf:hover{background:var(--lime);color:var(--ink);border-color:var(--ink);transform:translate(-2px,-2px)}
+.botao{display:inline-flex;align-items:center;gap:12px;font:700 13px var(--mono);letter-spacing:.12em;text-transform:uppercase;padding:16px 22px;border:2px solid currentColor;background:transparent;color:inherit;text-decoration:none;transition:transform .2s,background .2s,color .2s,box-shadow .2s}
+.botao:hover{background:var(--lime);color:var(--ink);border-color:var(--ink);transform:translate(-2px,-2px);box-shadow:2px 2px 0 var(--ink)}
+.botao.cheio{background:var(--ink);color:var(--lime);border-color:var(--ink)}
+.botao.limao{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+.seta::after{content:'→';font-family:var(--corpo);font-size:17px}
+.cta{display:inline-flex;align-items:center;gap:9px;font:700 12px var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.cta svg{width:18px;height:18px}
+#barra{position:absolute;left:0;right:0;bottom:0;height:4px;background:rgba(127,127,127,.2);z-index:20}
+#barra i{display:block;height:100%;width:0;background:var(--lime);transition:width .5s}
+#nav{position:absolute;right:96px;bottom:22px;display:flex;align-items:center;gap:12px;font:400 12px var(--mono);letter-spacing:.14em;z-index:20;color:var(--paper);transition:color .3s}
+#nav.tinta{color:var(--ink)}
+#nav button{width:30px;height:30px;background:none;border:2px solid currentColor;color:inherit;font:400 15px var(--corpo);line-height:1;transition:transform .2s}
+#nav button:hover{transform:translate(-2px,-2px)}
+.anima{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.slide.on .anima{opacity:1;transform:none}
+.slide.on .d1{transition-delay:.12s}.slide.on .d2{transition-delay:.24s}.slide.on .d3{transition-delay:.36s}.slide.on .d4{transition-delay:.48s}
 
 /* 01 capa */
-.s-capa{justify-content:center;background:var(--navy)!important}
-.s-capa .cav{position:absolute;right:-30px;bottom:-110px;width:760px;opacity:.08;filter:brightness(0) invert(1);z-index:0}
-.s-capa .fx{position:absolute;left:0;top:0;bottom:0;width:18px;background:var(--blue);z-index:1}
-.s-capa .logos{display:flex;align-items:center;gap:22px;margin-bottom:46px}
-.s-capa .logos .es{height:74px}
-.s-capa .logos .w{height:34px}
-.s-capa .logos b{font-size:22px;opacity:.6}
-.s-capa h1{font-size:112px;line-height:.98;max-width:1190px}
-.s-capa h1 em{font-style:normal;color:var(--blue)}
-.s-capa p{font-size:25px;line-height:1.35;max-width:800px;margin-top:32px;color:var(--mute)}
-.s-capa .acoes{display:flex;align-items:center;gap:14px;margin-top:40px}
-.bt{display:inline-flex;align-items:center;gap:12px;background:var(--blue);color:#fff;padding:17px 32px;font-size:18px;font-weight:800;clip-path:var(--trap)}
-.bt.alt{background:#fff;color:var(--navy)}
+.capa{background:#000;color:var(--paper)}
+.capa .foto{position:absolute;inset:0;background:url(assets/foto-balcao.jpg) right center/cover;transform:scale(1.05);transition:transform 8s ease}
+.capa.on .foto{transform:scale(1)}
+.capa .veu{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,5,5,.97) 0%,rgba(5,5,5,.92) 38%,rgba(5,5,5,.42) 58%,rgba(5,5,5,.05) 78%)}
+.capa .tx{position:absolute;left:96px;bottom:104px;width:800px}
+.capa h1{font-size:128px;margin:22px 0 24px;line-height:.98}
+.capa .lead{font-size:21px;line-height:1.42;width:640px;margin-bottom:34px;opacity:.92}
+.capa .acoes{display:flex;gap:14px}
 
-/* 02 resumo: quatro bilhetes */
-.s-res h2{max-width:1250px}
-.tiras{display:grid;grid-template-columns:repeat(4,1fr);gap:0;flex:1;margin-top:34px;border:1.5px solid var(--dkline);background:var(--paper)}
-.tira{padding:30px 28px;display:flex;flex-direction:column;border-right:1.5px dashed var(--dkline)}
-.tira:last-child{border-right:0;background:var(--blue);color:#fff}
-.tira:last-child .k{color:#fff}
-.tira .k{color:var(--blue-deep)}
-.tira .num{font-size:82px;line-height:1;margin-top:auto;letter-spacing:-.02em}
-.tira .num small{font-size:34px;display:block;margin-top:2px;letter-spacing:0}
-.tira h3{font-size:25px;line-height:1.15;margin-top:22px}
-.tira p{font-size:17.5px;line-height:1.35;margin-top:10px;opacity:.82;min-height:96px}
+/* 02 retrato */
+.retrato .esq{position:absolute;left:96px;top:112px;width:510px}
+.retrato .num{font-size:176px;color:var(--azul);line-height:.92;margin-top:16px}
+.retrato .rot{font-family:var(--titulo);font-weight:900;font-size:36px;text-transform:uppercase;margin-top:8px;line-height:1.05}
+.retrato .ctx{font-size:17px;line-height:1.42;margin-top:12px;max-width:470px}
+.retrato .ctx+.ctx{margin-top:8px;opacity:.72;font-size:15px}
+.retrato .ft{height:256px;margin-top:20px;background:url(assets/foto-arquitetura.jpg) center 62%/cover}
+.retrato .dirr{position:absolute;left:660px;right:96px;top:112px}
+.retrato h2{font-size:78px;margin:14px 0 26px}
+.barras{border-top:2px solid var(--fio)}
+.bl{display:grid;grid-template-columns:104px 1fr 200px;align-items:center;gap:16px;padding:18px 0;border-bottom:2px solid var(--fio)}
+.bl b{font-family:var(--titulo);font-weight:900;font-size:30px;text-transform:uppercase}
+.bl .tr{height:32px;position:relative;background:repeating-linear-gradient(135deg,rgba(5,5,5,.2) 0 2px,transparent 2px 8px)}
+.bl .tr i{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--azul);transition:width 1.1s cubic-bezier(.2,.7,.2,1) .35s;border-right:2px solid var(--paper)}
+.bl .val{font-size:15px;line-height:1.25;text-align:right}
+.bl .val strong{display:block;font-family:var(--titulo);font-weight:900;font-size:27px}
+.leg{display:flex;gap:22px;margin-top:14px;font:400 12px var(--mono)}
+.leg span{display:flex;align-items:center;gap:8px}
+.leg i{width:18px;height:12px;display:block}
+.hoje{margin-top:22px;display:flex;align-items:center;gap:14px;font-size:18px;font-weight:500}
+.selo{font:700 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;background:var(--ink);color:var(--lime);padding:6px 10px;flex:none}
 
-/* 03 acordado: lombadas e ondas */
-.s-acor .cima{display:grid;grid-template-columns:1fr 520px;gap:56px;flex:1;margin-top:26px}
-.lomb{display:flex;align-items:flex-end;gap:18px;border-bottom:2px solid var(--line)}
-.lomb .l{flex:1;display:flex;flex-direction:column;justify-content:flex-end}
-.lomb .q{font-size:36px}
-.lomb .n{font-size:16px;font-weight:800;margin:1px 0 8px}
-.lomb .p{font-size:14px;opacity:.72;margin-bottom:8px}
-.lomb .b{clip-path:polygon(7% 0,93% 0,100% 100%,0 100%)}
-.dados{display:flex;flex-direction:column;justify-content:flex-end}
-.dado{display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:12px 0;border-top:1px solid var(--line);font-size:17.5px}
-.dado span{opacity:.72}
-.dado b{font-size:21px;font-stretch:108%;text-align:right}
-.ondas{display:grid;gap:6px;margin-top:24px;height:118px;align-items:end}
-.onda{display:flex;flex-direction:column;justify-content:flex-end;height:100%;font-size:13px;font-weight:700}
-.onda i{display:block;background:var(--blue);margin:4px 0 6px}
-.onda.vz i{background:var(--line)}
-.onda small{font-size:13px;opacity:.72;font-weight:700}
+/* 03 pedido */
+.pedido h2{position:absolute;left:96px;top:104px;width:1300px;font-size:76px}
+.pedido h2 span{color:var(--ink)}
+.eq{position:absolute;left:96px;right:96px;top:284px;display:grid;grid-template-columns:auto 60px auto 60px 1fr;align-items:start;gap:0 12px;border-top:2px solid rgba(255,255,255,.45);padding-top:18px}
+.eq .num{font-size:152px;line-height:.95;color:#fff}
+.eq .num.f{color:var(--ink)}
+.eq .op{font-family:var(--titulo);font-weight:700;font-size:70px;text-align:center;padding-top:18px}
+.eq small{display:block;font-size:18px;line-height:1.3;margin-top:8px;font-family:var(--corpo);font-weight:500;letter-spacing:0;text-transform:none;max-width:420px}
+.ideias-h{position:absolute;left:96px;right:96px;top:572px;display:flex;justify-content:space-between;align-items:center}
+.ideias{position:absolute;left:96px;right:96px;top:606px;display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.ideia{background:var(--ink);color:var(--paper);border:0;text-align:left;padding:18px 18px 16px;height:218px;display:flex;flex-direction:column;font-family:var(--corpo);transition:transform .2s,background .2s}
+.ideia:hover{transform:translate(-2px,-4px);background:var(--marinho)}
+.ideia span{font:700 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--lime)}
+.ideia b{font-family:var(--titulo);font-weight:900;font-size:31px;line-height:1.02;text-transform:uppercase;margin:10px 0 auto}
+.ideia em{font-style:normal;font-size:15px;line-height:1.3;display:flex;justify-content:space-between;gap:10px;align-items:flex-end;opacity:.92}
+.ideia em::after{content:'→';font-size:17px;color:var(--lime)}
 
-/* 04 realizado: número e medidores */
-.s-real{display:none}
-.s-real.on{display:grid;grid-template-columns:490px 1fr;gap:58px}
-.s-real .esq{display:flex;flex-direction:column}
-.s-real h2{font-size:46px}
-.s-real .gig{font-size:138px;line-height:.92;margin-top:auto;letter-spacing:-.03em;color:var(--blue-deep)}
-.s-real .sub{font-size:22px;font-weight:700;margin-top:10px}
-.med{display:flex;flex-direction:column;gap:17px;justify-content:center}
-.lin .top{display:flex;justify-content:space-between;align-items:baseline;font-size:23px;font-weight:800}
-.lin .top span{font-size:18px;font-weight:600;color:var(--dk2)}
-.barra{height:44px;background:var(--cream2);margin-top:6px;position:relative;clip-path:polygon(.8% 0,99.2% 0,100% 100%,0 100%)}
-.barra i{position:absolute;left:0;top:0;bottom:0;background:var(--navy);width:var(--w);transition:width 1s var(--ease)}
-.travas{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px}
-.trava{background:var(--navy);color:var(--cream);padding:18px 22px;font-size:18px;line-height:1.3}
-.trava b{display:block;font-size:22px;font-stretch:108%;margin-bottom:3px;color:#fff}
+/* 04 momento */
+.momento h2{position:absolute;left:96px;top:100px;font-size:82px;width:1408px;white-space:nowrap}
+.grafico{position:absolute;left:96px;top:214px;width:870px;height:574px}
+.grafico .heroi{display:flex;align-items:flex-end;gap:18px}
+.grafico .heroi .num{font-size:112px;color:var(--lime);line-height:.9}
+.grafico .heroi p{font-size:18px;line-height:1.35;padding-bottom:6px;max-width:470px}
+#svgDolar{position:absolute;left:0;top:124px;width:870px;height:450px;overflow:visible}
+#svgDolar .g{stroke:rgba(242,241,233,.12);stroke-width:1}
+#svgDolar text{font-family:var(--mono);font-size:12px;fill:var(--paper)}
+#svgDolar .lin{fill:none;stroke:var(--lime);stroke-width:3;stroke-linejoin:round}
+#dicaDolar{position:absolute;display:none;background:var(--paper);color:var(--ink);font:700 12px var(--mono);padding:6px 9px;pointer-events:none;white-space:nowrap;z-index:3}
+.fatores{position:absolute;left:1020px;right:96px;top:214px;list-style:none}
+.fatores li{padding:0 0 18px;margin-bottom:18px;border-bottom:2px solid var(--fio-c)}
+.fatores li:last-child{border:0;margin:0;padding:0}
+.fatores span{font:700 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--lime)}
+.fatores b{display:block;font-family:var(--titulo);font-weight:900;font-size:64px;line-height:1;margin:4px 0 6px}
+.fatores p{font-size:16px;line-height:1.38;opacity:.88}
 
-/* 05 pedido: equação */
-.s-ped h2{max-width:1200px}
-.eq{display:grid;grid-template-columns:1fr 62px 1fr 62px 1.18fr;align-items:stretch;margin-top:30px}
-.eq .c{padding:26px 28px;border:2px solid var(--line)}
-.eq .c.fim{background:var(--blue);border-color:var(--blue)}
-.eq .c .num{display:block;font-size:96px;line-height:1;letter-spacing:-.02em}
-.eq .c small{display:block;font-size:19px;line-height:1.3;margin-top:8px;opacity:.85}
-.eq .op{display:grid;place-items:center;font-size:48px;font-weight:800}
-.ped-baixo{display:grid;grid-template-columns:1fr 1.32fr;gap:48px;flex:1;margin-top:32px}
-.ritmo .num{font-size:66px;line-height:1}
-.ritmo small{font-size:19.5px;line-height:1.35;display:block;margin-top:12px;opacity:.82}
-.ritmo .aviso{margin-top:22px;padding-left:18px;border-left:4px solid var(--lime);font-size:21px;line-height:1.3;font-weight:600}
-.pedidos{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;align-content:start}
-.pedido{display:flex;gap:12px;padding:19px 0;border-top:1px solid var(--line);font-size:20px;line-height:1.28}
-.pedido svg{color:var(--lime)}
+/* 05 simulador */
+.simula h2{position:absolute;left:96px;top:104px;font-size:82px;width:1300px}
+.trav{position:absolute;left:96px;top:318px;width:560px;height:446px;background:var(--ink);color:var(--paper);padding:32px 36px}
+.trav .num{font-size:92px;color:var(--lime);margin:12px 0 18px;line-height:1}
+.trav ul{list-style:none;border-top:2px solid var(--fio-c)}
+.trav li{display:grid;grid-template-columns:22px 1fr;gap:10px;font-size:18px;line-height:1.35;padding:14px 0;border-bottom:2px solid var(--fio-c)}
+.trav li svg{width:18px;height:18px;margin-top:3px;color:var(--lime)}
+.aberto{position:absolute;left:656px;right:96px;top:318px;height:446px;border:2px solid var(--ink);border-left:0;padding:32px 40px;background:#fff}
+.aberto .cab{display:flex;justify-content:space-between;align-items:center}
+.aberto .res{display:flex;align-items:baseline;gap:18px;margin:12px 0 2px}
+.aberto .res .num{font-size:92px;color:var(--azul);line-height:1}
+.aberto .res span{font-family:var(--titulo);font-weight:900;font-size:40px;text-transform:uppercase}
+.aberto p.exp{font-size:17px;line-height:1.35}
+#rg{-webkit-appearance:none;appearance:none;width:100%;height:10px;background:var(--paper-2);margin:32px 0 8px;display:block;outline:none}
+#rg::-webkit-slider-thumb{-webkit-appearance:none;width:30px;height:30px;background:var(--ink);border:4px solid var(--lime);box-shadow:0 0 0 2px var(--ink)}
+.marcos{position:relative;height:40px;font:400 12px/1.25 var(--mono)}
+.marcos span{position:absolute;top:0;transform:translateX(-50%);text-align:center;white-space:nowrap}
+.marcos span::before{content:'';display:block;width:2px;height:7px;background:var(--ink);margin:0 auto 3px}
+.cen{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--fio);margin-top:22px}
+.cen div{padding:14px 0 0;font-size:15px;line-height:1.3}
+.cen b{display:block;font-family:var(--titulo);font-weight:900;font-size:36px;line-height:1.1}
 
-/* 06 gráfica: pergunta e resposta */
-.s-gra{background:var(--ink2)!important}
-.gra{display:grid;grid-template-columns:480px 1fr;gap:34px;flex:1;margin-top:22px;min-height:0}
-.perg{display:flex;flex-direction:column;gap:7px}
-.perg button{position:relative;display:flex;align-items:center;gap:14px;padding:0 18px;flex:1;background:var(--ink3);font-size:18.5px;font-weight:700;line-height:1.15;overflow:hidden}
-.perg button svg{margin-left:auto;opacity:.5}
-.perg button.sel{background:var(--blue);color:#fff}
-.perg button.sel svg{opacity:1}
-.perg button i{position:absolute;left:0;bottom:0;height:4px;background:#fff;width:0}
-.perg button.sel.rodando i{animation:enche var(--t,7s) linear both}
-@keyframes enche{to{width:100%}}
-.resp{background:var(--cream);color:var(--dk);padding:38px 44px;display:flex;flex-direction:column}
-.selo{align-self:flex-start;padding:8px 18px;font-size:15px;font-weight:800;color:#fff;background:var(--navy);clip-path:var(--trap)}
-.selo.sim{background:#1A7F4B}.selo.cond{background:var(--blue-deep)}.selo.nao{background:#B8430E}
-.resp h3{font-size:42px;line-height:1.08;margin-top:22px}
-.resp p{font-size:21px;line-height:1.38;margin-top:16px;color:var(--dk2)}
-.resp .efeito{margin-top:auto;padding-top:16px;border-top:1.5px solid var(--dkline);font-size:18.5px;font-weight:700;line-height:1.3}
-.resp .efeito span{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-deep);font-weight:800;margin-bottom:4px}
-.pdf .gra{display:block}
-.pdf .perg{display:none}
-.pdf .resp{display:none}
-.tudo{display:none}
-.pdf .tudo{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;height:100%}
-.pdf .tudo div:last-child{grid-column:span 2}
-.tudo div{background:var(--cream);color:var(--dk);padding:24px 24px;display:flex;flex-direction:column}
-.tudo h3{font-size:24px;line-height:1.12;margin-top:12px}
-.tudo p{font-size:16.5px;line-height:1.3;margin-top:auto;padding-top:12px;color:var(--dk2)}
-.tudo .selo{font-size:12.5px;padding:6px 14px}
-.tudo .q{font-style:normal;font-size:15px;font-weight:700;line-height:1.2;color:var(--blue-deep);margin-bottom:10px;min-height:37px}
+/* 06 prazo */
+.prazo .esq{position:absolute;left:96px;top:112px;width:560px}
+.prazo h2{font-size:76px;margin-top:14px}
+.prazo .mes{font-family:var(--titulo);font-weight:900;font-size:190px;line-height:.92;color:var(--lime);text-transform:uppercase;margin-top:26px;letter-spacing:-.02em}
+.prazo .sob{font-size:19px;line-height:1.4;margin-top:8px;max-width:520px}
+.escada{position:absolute;left:720px;right:96px;bottom:300px;height:390px;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;align-items:end}
+.deg{padding:16px 16px;display:flex;flex-direction:column;background:rgba(255,255,255,.1);transform-origin:bottom;transform:scaleY(0);transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.prazo.on .deg{transform:none}
+.deg:nth-child(1){height:130px}.deg:nth-child(2){height:210px;transition-delay:.15s}.deg:nth-child(3){height:290px;transition-delay:.3s}.deg:nth-child(4){height:380px;transition-delay:.45s;background:var(--lime);color:var(--ink)}
+.deg span{font:700 12px var(--mono);letter-spacing:.1em;text-transform:uppercase;opacity:.75}
+.deg b{font-family:var(--titulo);font-weight:900;font-size:30px;line-height:1.02;text-transform:uppercase;margin-top:6px}
+.cond{position:absolute;left:720px;right:96px;top:618px;display:grid;grid-template-columns:repeat(3,1fr);gap:26px;border-top:2px solid var(--fio-c);padding-top:16px}
+.cond b{display:block;font-family:var(--titulo);font-weight:900;font-size:26px;line-height:1.05;text-transform:uppercase;margin-bottom:6px;color:var(--lime)}
+.cond p{font-size:15px;line-height:1.36;opacity:.9}
 
-/* 07 caminhos: linha do tempo que muda */
-.cam-abas{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:20px}
-.cam-abas button{position:relative;padding:15px 22px;background:rgba(255,255,255,.08);overflow:hidden}
-.cam-abas button span{display:block;font-size:12.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;opacity:.75}
-.cam-abas button b{display:block;font-size:24px;font-stretch:110%;line-height:1.1;margin-top:3px}
-.cam-abas button.sel{background:var(--cream);color:var(--dk)}
-.cam-abas button.sel.rec{background:var(--lime)}
-.cam-abas button i{position:absolute;left:0;bottom:0;height:4px;background:var(--blue);width:0}
-.cam-abas button.sel.rodando i{animation:enche var(--t,9s) linear both}
-.cam-corpo{display:grid;grid-template-columns:1fr 380px;gap:36px;flex:1;margin-top:20px;min-height:0}
-.gantt{display:flex;flex-direction:column}
-.g-m{display:grid;grid-template-columns:88px repeat(14,1fr);font-size:13.5px;font-weight:700;opacity:.75}
-.g-m span{text-align:center}
-.g-m span.ano{opacity:1}
-.g-l{display:grid;grid-template-columns:88px 1fr;align-items:center;margin-top:10px}
-.g-l>b{font-size:18px;font-stretch:108%}
-.g-tr{position:relative;height:88px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 1px,transparent 1px calc(100%/14))}
-.seg{position:absolute;top:0;bottom:0;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;white-space:nowrap;overflow:hidden;clip-path:polygon(0 0,100% 0,100% 100%,0 100%);transition:left .55s var(--ease),width .55s var(--ease)}
-.seg.saldo{background:var(--blue);color:#fff}
-.seg.novo{background:var(--lime);color:var(--dk)}
-.seg.lote{background:var(--cream);color:var(--dk)}
-.seg.plan{background:repeating-linear-gradient(135deg,rgba(255,255,255,.12) 0 8px,transparent 8px 16px);color:var(--cream);font-weight:700}
-.g-leg{display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:14px;font-size:15px;font-weight:600}
-.g-leg span{display:flex;align-items:center;gap:8px}
-.g-leg i{width:18px;height:12px;display:block}
-.frase{margin-top:auto;font-size:24px;line-height:1.28;font-weight:700;padding-top:12px}
-.kpis{display:flex;flex-direction:column;justify-content:space-between}
-.kpi{padding:9px 0;border-top:1px solid var(--line)}
-.kpi span{display:block;font-size:12.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;opacity:.65}
-.kpi b{display:block;font-size:27px;font-stretch:108%;line-height:1.12;margin-top:2px}
-.kpi small{display:block;font-size:15.5px;line-height:1.25;opacity:.75;margin-top:2px}
+/* 07 formatos */
+.formato h2{position:absolute;left:96px;top:100px;font-size:72px;width:1340px}
+.lams{position:absolute;left:96px;top:276px;display:grid;grid-template-columns:repeat(3,310px);gap:24px}
+.lam .slot{width:310px;height:191px;position:relative;border:2px dashed rgba(5,5,5,.3)}
+.lam .slot img{position:absolute;left:-2px;bottom:-2px;display:block;box-shadow:0 8px 22px rgba(5,5,5,.2)}
+.lam h3{font-size:34px;margin-top:14px}
+.lam p{font-size:15px;line-height:1.3;margin-top:2px;opacity:.75}
+.lam .x{font-family:var(--titulo);font-weight:900;font-size:78px;line-height:1;color:var(--azul);margin-top:8px}
+.lam .x small{font-size:17px;font-family:var(--corpo);font-weight:500;letter-spacing:0;text-transform:none;color:var(--ink);display:block;line-height:1.25;margin-top:2px}
+.pq{position:absolute;left:1120px;right:96px;top:276px;list-style:none;border-top:2px solid var(--fio)}
+.pq li{padding:13px 0;border-bottom:2px solid var(--fio);font-size:16px;line-height:1.36}
+.pq b{display:block;font-family:var(--titulo);font-weight:900;font-size:27px;text-transform:uppercase;line-height:1.04;margin-bottom:3px}
+.virada{position:absolute;left:96px;right:96px;top:682px;background:var(--ink);color:var(--paper);padding:20px 28px;display:flex;align-items:center;gap:26px;font-size:20px;line-height:1.32}
+.virada strong{font-family:var(--titulo);font-weight:900;font-size:36px;text-transform:uppercase;color:var(--lime);flex:none;line-height:1}
 
-/* 08 matriz */
-.s-mat .ban{display:flex;align-items:center;gap:16px;background:var(--navy);color:#fff;padding:13px 22px;font-size:20px;font-weight:700;margin-top:18px}
-.s-mat .ban svg{color:var(--lime)}
-.mat{display:grid;grid-template-columns:1fr 212px 212px 248px;flex:1;margin-top:14px}
-.mat>div{display:flex;align-items:center;padding:0 16px;border-bottom:1.5px solid var(--dkline);font-size:19.5px;font-weight:600}
-.mat .h{font-size:15px;font-weight:800;line-height:1.15;justify-content:center;text-align:center;border-bottom:2px solid var(--dk)}
-.mat .c{justify-content:center;font-size:16px;font-weight:700;gap:9px}
-.mat .rec{background:var(--navy);color:#fff;border-bottom-color:rgba(255,255,255,.18)}
-.mat .rec.h{background:var(--lime);color:var(--dk);border-bottom-color:var(--dk)}
-.bol{width:21px;height:21px;border-radius:50%;border:2.5px solid currentColor;flex:0 0 auto}
-.bol.s{background:currentColor}
-.bol.p{background:linear-gradient(90deg,currentColor 50%,transparent 50%)}
+/* 08 manuseio */
+.manuseio h2{position:absolute;left:96px;top:100px;font-size:82px;width:1408px;white-space:nowrap}
+.raia{position:absolute;left:96px;right:96px;display:grid;grid-template-columns:172px repeat(5,1fr);gap:8px;align-items:stretch}
+.raia.r1{top:216px}.raia.r2{top:392px}
+.raia .nome{font-family:var(--titulo);font-weight:900;font-size:32px;line-height:1.02;text-transform:uppercase;padding-right:10px;align-self:center}
+.raia .nome small{display:block;font:400 12px/1.3 var(--mono);text-transform:none;letter-spacing:0;margin-top:6px;opacity:.75}
+.pa{height:164px;padding:16px 24px 15px 16px;font-size:17px;line-height:1.32;background:var(--ink-3);position:relative;clip-path:polygon(0 0,calc(100% - 14px) 0,100% 50%,calc(100% - 14px) 100%,0 100%)}
+.pa b{display:block;font-family:var(--titulo);font-weight:900;font-size:29px;line-height:1.02;text-transform:uppercase;margin-bottom:6px}
+.r1 .pa{background:var(--lime);color:var(--ink)}
+.r2 .pa{background:#2a2a31}
+.r2 .pa.ruim{background:#fff;color:var(--ink)}
+.volta{position:absolute;left:96px;right:96px;top:584px;display:grid;grid-template-columns:172px 1fr 1fr;gap:8px 8px}
+.volta div{padding:16px 20px;font-size:17px;line-height:1.36;border:2px solid var(--fio-c);min-height:188px;font-size:19px}
+.volta div b{display:block;font-family:var(--titulo);font-weight:900;font-size:42px;text-transform:uppercase;margin-bottom:10px;color:var(--lime);line-height:1.04}
+.volta .nome{font-family:var(--titulo);font-weight:900;font-size:32px;line-height:1.02;text-transform:uppercase;border:0;padding:0;align-self:center;min-height:0}
 
-/* 09 recomendação: escada */
-.s-rec{background:var(--blue)!important}
-.s-rec .k{color:#fff}
-.s-rec h2{font-size:46px;white-space:nowrap}
-.esc{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;flex:1;margin-top:18px;align-items:end}
-.deg{background:var(--navy);padding:24px 26px;display:flex;flex-direction:column;align-self:stretch}
-.deg:nth-child(1){margin-top:96px}
-.deg:nth-child(2){margin-top:30px}
-.deg .q{font-size:13.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--lime)}
-.deg h3{font-size:34px;line-height:1.06;margin-top:9px}
-.deg ul{list-style:none;margin-top:14px}
-.deg li{font-size:20px;line-height:1.26;padding:11px 0;border-top:1px solid rgba(255,255,255,.16)}
-.deg .fim{margin-top:auto;padding-top:14px}
-.deg .fim .num{display:block;font-size:64px;line-height:1;letter-spacing:-.02em;color:var(--lime)}
-.deg .fim small{display:block;font-size:17px;line-height:1.28;margin-top:6px;opacity:.85}
-.s-rec .soma{position:absolute;right:96px;top:90px;text-align:right;z-index:3}
-.s-rec .soma .num{font-size:40px;line-height:1}
-.s-rec .soma small{display:block;font-size:15px;font-weight:700;margin-top:6px}
-.s-rec .fonte{opacity:.85}
+/* 09 caminhos */
+.caminhos h2{position:absolute;left:96px;top:96px;font-size:70px;width:1340px}
+.gt{position:absolute;left:96px;right:96px;top:198px}
+.gt .cab,.gt .ln{display:grid;grid-template-columns:262px 688px 1fr;gap:0 22px}
+.gt .ms{display:grid;grid-template-columns:repeat(9,1fr);font:700 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;padding-bottom:8px}
+.gt .ln{border-top:2px solid var(--fio);padding:18px 0;align-items:center;min-height:188px}
+.gt .ln.rec{background:var(--ink);color:var(--paper);margin:0 -22px;padding:18px 22px;border-top:0}
+.gt .rot span{font:700 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--azul)}
+.gt .rec .rot span{color:var(--lime)}
+.gt .rot b{display:block;font-family:var(--titulo);font-weight:900;font-size:35px;line-height:1.02;text-transform:uppercase;margin-top:4px}
+.gt .tr{position:relative;height:128px;background-image:linear-gradient(90deg,var(--fio) 2px,transparent 2px);background-size:calc(100%/9) 100%}
+.gt .rec .tr{background-image:linear-gradient(90deg,var(--fio-c) 2px,transparent 2px)}
+.gt .sg{position:absolute;height:58px;padding:7px 10px;font-size:14px;line-height:1.18;font-weight:600;display:flex;align-items:center;overflow:hidden}
+.sg.t1{top:0}.sg.t2{top:66px}
+.sg.tv{background:var(--azul);color:#fff}
+.sg.nv{background:var(--marinho);color:#fff}
+.sg.lm{background:var(--lime);color:var(--ink)}
+.sg.pr{background:repeating-linear-gradient(135deg,rgba(5,5,5,.14) 0 2px,transparent 2px 8px);border:2px solid var(--fio);color:var(--ink)}
+.rec .sg.pr{background:repeating-linear-gradient(135deg,rgba(242,241,233,.18) 0 2px,transparent 2px 8px);border-color:var(--fio-c);color:var(--paper)}
+.gt dl{display:grid;grid-template-columns:96px 1fr;gap:6px 10px;font-size:15px;line-height:1.28}
+.gt dt{font:700 11px/1.5 var(--mono);letter-spacing:.06em;text-transform:uppercase;opacity:.62}
+.gt dd strong{font-weight:700}
 
-/* 10 decisão */
-.s-dec{display:none}
-.s-dec.on{display:grid;grid-template-columns:1fr 390px;gap:50px;background:var(--navy)}
-.dec-l h2{margin-bottom:18px}
-.decs{display:flex;flex-direction:column;gap:10px}
-.decs button{display:grid;grid-template-columns:40px 1fr 136px;align-items:center;gap:18px;padding:23px 24px;background:rgba(255,255,255,.08)}
-.decs .ck{width:34px;height:34px;border:2.5px solid #fff;display:grid;place-items:center;clip-path:none}
-.decs .ck svg{opacity:0;width:20px;height:20px;stroke-width:3.4}
-.decs button.ok{background:var(--lime);color:var(--dk)}
-.decs button.ok .ck{border-color:var(--dk)}
-.decs button.ok .ck svg{opacity:1}
-.decs b{display:block;font-size:26px;font-stretch:108%;line-height:1.12}
-.decs small{display:block;font-size:17.5px;line-height:1.25;margin-top:3px;opacity:.82}
-.decs em{font-style:normal;font-size:13px;font-weight:800;text-align:right;letter-spacing:.04em;opacity:.8}
-.fim-d{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:18px}
-.anel{position:relative;width:216px;height:216px}
-.anel svg{width:100%;height:100%;transform:rotate(-90deg)}
-.anel circle{fill:none;stroke-width:12}
-.anel .tr{stroke:rgba(255,255,255,.14)}
-.anel .pg{stroke:var(--lime);stroke-dasharray:540;stroke-dashoffset:540;transition:stroke-dashoffset .6s var(--ease)}
-.anel div{position:absolute;inset:0;display:grid;place-content:center}
-.anel .num{font-size:60px;line-height:1}
-.anel small{font-size:13px;font-weight:700;opacity:.8}
-.fim-d p{font-size:21px;line-height:1.3;font-weight:600}
-.zap{display:inline-flex;align-items:center;gap:10px;background:var(--lime);color:var(--dk);padding:15px 26px;font-size:17px;font-weight:800;clip-path:var(--trap)}
-.inst{font-size:13px;line-height:1.4;opacity:.72}
-.pdf .fim-d .anel,.pdf .zap svg{display:none}
+/* 10 fim */
+.fim .esq{position:absolute;left:96px;top:112px;width:610px}
+.fim h2{font-size:126px;line-height:.98;margin:14px 0 18px}
+.fim .lead{font-size:20px;line-height:1.42;margin-bottom:22px}
+.entregas{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:3px solid var(--ink);margin-bottom:26px}
+.entregas div{padding:12px 12px 0 0;font-size:15px;line-height:1.28}
+.entregas div+div{padding-left:14px;border-left:2px solid var(--fio)}
+.entregas span{font:700 12px var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.entregas b{display:block;font-family:var(--titulo);font-weight:900;font-size:54px;line-height:1.02}
+.fim .dirr{position:absolute;left:770px;right:96px;top:112px}
+.fim .chk-h{display:flex;justify-content:space-between;align-items:center;padding-bottom:12px}
+.chk{width:100%;display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start;text-align:left;background:none;border:0;border-top:2px solid rgba(5,5,5,.3);padding:15px 0;color:inherit;font-family:var(--corpo);transition:background .2s}
+.chk:last-of-type{border-bottom:2px solid rgba(5,5,5,.3)}
+.chk:hover{background:rgba(255,255,255,.25)}
+.chk i{width:40px;height:40px;border:3px solid var(--ink);display:grid;place-items:center;margin-top:2px}
+.chk i svg{width:24px;height:24px;opacity:0;transition:opacity .2s}
+.chk.ok i{background:var(--ink);color:var(--lime)}
+.chk.ok i svg{opacity:1}
+.chk small{font:700 11px var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.chk b{display:block;font-family:var(--titulo);font-weight:900;font-size:33px;line-height:1.04;text-transform:uppercase;margin:2px 0 3px}
+.chk span{display:block;font-size:16px;line-height:1.34}
+.fim .assin{position:absolute;left:96px;right:96px;bottom:44px;display:flex;justify-content:space-between;align-items:flex-end;border-top:2px solid rgba(5,5,5,.25);padding-top:12px;font-size:14px;line-height:1.42}
+.fim .assin small{font:400 11px/1.45 var(--mono);text-align:left;display:block;padding-right:170px}
+
+/* cursor em dois tons */
+#cursor{position:fixed;left:0;top:0;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:var(--ink);box-shadow:0 0 0 2px var(--paper),0 0 0 4px rgba(5,5,5,.35);pointer-events:none;z-index:99;transition:width .18s,height .18s,margin .18s,background .18s;display:none}
+#cursor.sobre{width:46px;height:46px;margin:-23px 0 0 -23px;background:transparent;box-shadow:0 0 0 2px var(--ink),0 0 0 4px var(--paper)}
+body.tem-mouse #cursor{display:block}
+/* PDF */
+.pdf *{transition:none!important;animation:none!important}
+.pdf .anima{opacity:1;transform:none}
+.pdf .cta,.pdf .btn-pdf,.pdf #nav,.pdf #barra,.pdf #cursor,.pdf .so-tela{display:none!important}
+.pdf #rg{pointer-events:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
-  <symbol id="i-seta" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
-  <symbol id="i-volta" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
-  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
-  <symbol id="i-mao" viewBox="0 0 24 24"><path d="M9 11V5.5a1.5 1.5 0 013 0V11m0-1.5a1.5 1.5 0 013 0V11m0-.5a1.5 1.5 0 013 0V15a6 6 0 01-6 6h-1a6 6 0 01-5-2.7L3.6 14a1.5 1.5 0 012.5-1.6L9 15"/></symbol>
-  <symbol id="i-pdf" viewBox="0 0 24 24"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></symbol>
-  <symbol id="i-alerta" viewBox="0 0 24 24"><path d="M12 8v5M12 16.5v.5M10.3 4L2.8 17a2 2 0 001.7 3h15a2 2 0 001.7-3L13.7 4a2 2 0 00-3.4 0z"/></symbol>
-  <symbol id="i-zap" viewBox="0 0 24 24"><path d="M4 20l1.3-4.4A8 8 0 1112 20a8 8 0 01-3.7-.9L4 20z"/></symbol>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="i-mao" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11V4.5a1.5 1.5 0 0 1 3 0V11m0-2a1.5 1.5 0 0 1 3 0v2m0-1a1.5 1.5 0 0 1 3 0v5a6 6 0 0 1-6 6h-1a6 6 0 0 1-5-2.7L3.6 15a1.6 1.6 0 0 1 2.6-1.8L9 15.5"/></symbol>
+<symbol id="i-ok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12.5l5 5L20 6.5"/></symbol>
 </defs></svg>
-<div id="cur"></div><div id="dot"></div>
+<div id="wrap"><div id="stage">
 
-<div id="deck"><div id="stage">
-
-<div id="top">
-  <div class="marca"><img class="es" src="assets/escudo-oficial.png" alt="Alltak"><b>×</b><img class="w" id="w75" src="assets/75lab-wordmark-paper.png" alt="75 LAB"></div>
-  <span class="sp"></span>
-  <a class="btn-pdf" href="alltak-catalogos-2027.pdf" download><svg class="i"><use href="#i-pdf"/></svg>PDF</a>
-  <span id="cont">01 / 10</span>
-</div>
-
-<!-- 01 -->
-<section class="slide s-capa" data-t="Início">
-  <img class="cav" src="assets/caveira-simbolo.png" alt=""><span class="fx"></span>
-  <div class="logos" data-a><img class="es" src="assets/escudo-oficial.png" alt="Alltak"><b>×</b><img class="w" src="assets/75lab-wordmark-paper.png" alt="75 LAB"></div>
-  <h1 data-a style="--d:1">Dos 95 mil combinados aos <em>90 mil de 2027.</em></h1>
-  <p data-a style="--d:2">O que foi acordado, o que foi feito, o que a Alltak pediu, o que a gráfica respondeu e o caminho que recomendamos.</p>
-  <div class="acoes" data-a style="--d:3">
-    <button class="bt" data-go="2">Ver o cenário <svg class="i"><use href="#i-seta"/></svg></button>
-    <a class="bt alt" href="alltak-catalogos-2027.pdf" download>Baixar em PDF</a>
+<!-- 01 capa -->
+<section class="slide capa on" data-t="Capa">
+  <div class="foto" role="img" aria-label="Balcão de revenda com bobinas e catálogos Alltak"></div><div class="veu"></div>
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-paper.png" alt="75 LAB"></div></div>
+  <div class="tx">
+    <span class="eb anima"><b>(Catálogos)</b> Cenário para 2027 · novembro de 2026</span>
+    <h1 class="anima d1">Primeiro fechar. <span class="cl">Depois crescer.</span></h1>
+    <p class="lead anima d2">O contrato ativo já tem preço travado, capa impressa e fila de produção. Terminá-lo até fevereiro é o caminho mais curto e mais barato para os 90.000 catálogos que vocês querem.</p>
+    <div class="acoes anima d3"><button class="botao limao seta so-tela" data-ir="2">Ver o cenário</button><a class="botao so-tela" href="alltak-catalogos-2027.pdf" download>Baixar em PDF</a></div>
   </div>
+  <div class="grao"></div>
+  <aside hidden>Abrimos com a ideia inteira: primeiro fechar o que está em andamento, depois crescer num contrato novo.</aside>
 </section>
 
-<!-- 02 -->
-<section class="slide light s-res" data-t="Resumo">
-  <span class="k" data-a>Resumo executivo</span>
-  <h2 data-a style="--d:1">Dá para ter o que a Alltak pediu sem voltar o contrato ao zero.</h2>
-  <div class="tiras" data-a style="--d:2">
-    <div class="tira"><span class="k">O acordado</span><span class="num" data-cu="95000">95.000</span><h3>Catálogos em ondas</h3><p>Quatro modelos, R$ 1.859.000 e bobina fornecida pela Alltak.</p></div>
-    <div class="tira"><span class="k">O realizado</span><span class="num" data-cu="33204">33.204</span><h3>35% entregue</h3><p>Decor e Sign seguem em lotes. Wraps aguarda a bobina para começar.</p></div>
-    <div class="tira"><span class="k">O pedido</span><span class="num" data-cu="90000">90.000</span><h3>Contrato novo em janeiro</h3><p>Zerar o atual e receber 2.500 de cada modelo por mês.</p></div>
-    <div class="tira"><span class="k">A recomendação</span><span class="num">60 + 30<small>mil em 2027</small></span><h3>Manter e mudar o ritmo</h3><p>O saldo segue no preço de hoje, o volume novo soma na mesma entrega mensal.</p></div>
+<!-- 02 retrato -->
+<section class="slide claro retrato" data-t="Onde estamos">
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div></div>
+  <div class="esq anima">
+    <span class="eb">O que já conquistamos</span>
+    <div class="num" data-conta="33204">33.204</div>
+    <div class="rot">catálogos entregues, de 95.000</div>
+    <p class="ctx">Pela primeira vez a Alltak tem catálogo chegando com regularidade. Catálogo é vitrine: é ele que coloca o produto na mão de quem vende.</p>
+    <p class="ctx">A primeira fase cobrou aprendizado dos dois lados: ajuste de máquina, perda nos substratos mais porosos, ano eleitoral na gráfica e bobinas fora do cronograma.</p>
+    <div class="ft" role="img" aria-label="Amostras de revestimento Alltak em um projeto de arquitetura"></div>
   </div>
-</section>
-
-<!-- 03 -->
-<section class="slide navy s-acor" data-t="Acordado">
-  <span class="k" style="color:var(--lime)" data-a>O que foi acordado</span>
-  <h2 data-a style="--d:1">95 mil catálogos, em ondas, com a bobina vindo da Alltak.</h2>
-  <div class="cima">
-    <div class="lomb" data-a style="--d:2">
-      <div class="l"><span class="q num">30.000</span><span class="n">Decor</span><span class="p">R$ 23,90 por unidade</span><div class="b" style="height:128px;background:var(--gold)"></div></div>
-      <div class="l"><span class="q num">30.000</span><span class="n">Wraps</span><span class="p">R$ 20,00 por unidade</span><div class="b" style="height:128px;background:var(--blue)"></div></div>
-      <div class="l"><span class="q num">30.000</span><span class="n">Sign</span><span class="p">R$ 12,90 por unidade</span><div class="b" style="height:128px;background:var(--orange)"></div></div>
-      <div class="l"><span class="q num">5.000</span><span class="n">Book Decor</span><span class="p">R$ 31,00 por unidade</span><div class="b" style="height:22px;background:var(--cream)"></div></div>
+  <div class="dirr">
+    <span class="eb anima"><b>(01)</b> Onde estamos</span>
+    <h2 class="anima d1">O catálogo chegou. <span class="ap">Agora falta</span> <span class="ca">terminar.</span></h2>
+    <div class="barras anima d2">
+      <div class="bl"><b>Decor</b><div class="tr"><i data-w="44.2"></i></div><div class="val"><strong>16.736</strong>a entregar, de 30.000</div></div>
+      <div class="bl"><b>Wraps</b><div class="tr"></div><div class="val"><strong>30.000</strong>nenhuma bobina recebida</div></div>
+      <div class="bl"><b>Sign</b><div class="tr"><i data-w="50"></i></div><div class="val"><strong>15.000</strong>a entregar, de 30.000</div></div>
+      <div class="bl"><b>Book</b><div class="tr"><i data-w="98.8"></i></div><div class="val"><strong>Concluído</strong>4.940 de 5.000</div></div>
     </div>
-    <div class="dados" data-a style="--d:3">
-      <div class="dado"><span>Valor total</span><b>R$ 1.859.000</b></div>
-      <div class="dado"><span>Pagamento por lote</span><b>30, 45 e 60 dias</b></div>
-      <div class="dado"><span>Quem fornece o adesivo</span><b>Alltak</b></div>
-      <div class="dado"><span>Quem imprime e monta</span><b>Gráfica, com gestão da 75 LAB</b></div>
-    </div>
+    <div class="leg anima d2"><span><i style="background:var(--azul)"></i>Entregue</span><span><i style="background:repeating-linear-gradient(135deg,rgba(5,5,5,.3) 0 2px,transparent 2px 6px)"></i>A entregar</span></div>
+    <div class="hoje anima d3"><span class="selo">Hoje</span>Faltam 61.736 catálogos. As capas já estão impressas: o que falta é bobina.</div>
   </div>
-  <div class="ondas" data-a style="--d:4" id="ondas"></div>
-  <div class="fonte">Fonte: calendário de produção dos catálogos revisado em 25/05/2026. Preços vigentes: Decor R$ 23,90 e Wraps R$ 20,00, mesmo total do calendário.</div>
+  <p class="fonte">Fonte: controle de entregas 75 LAB e reunião com a gráfica, 28/10/2026. O acordo inclui 60 unidades restantes do Book, fora desta conta.</p>
+  <div class="grao"></div>
+  <aside hidden>Começamos pelo que deu certo. O catálogo deixou de faltar. Falta terminar, e a parte que falta depende de bobina.</aside>
 </section>
 
-<!-- 04 -->
-<section class="slide light s-real" data-t="Realizado">
+<!-- 03 pedido -->
+<section class="slide azul pedido" data-t="O pedido">
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(02)</b> O que vocês pediram</span></div>
+  <h2 class="anima">A intenção é certa: previsibilidade.<br><span>O caminho é que sai caro.</span></h2>
+  <div class="eq anima d1">
+    <div class="num">61.736<small>que faltam do contrato ativo</small></div><div class="op">+</div>
+    <div class="num">28.264<small>a mais: 13.264 Decor e 15.000 Sign</small></div><div class="op">=</div>
+    <div class="num f">90.000<small>no contrato novo: 7.500 por mês, R$ 142 mil de parcela a preço de hoje</small></div>
+  </div>
+  <div class="ideias-h anima d2"><span class="eb" style="color:var(--ink)">Levamos cada ideia para a gráfica. A resposta:</span><span class="cta" style="color:var(--ink)"><svg><use href="#i-mao"/></svg>Clique em cada ideia</span></div>
+  <div class="ideias anima d3">
+    <button class="ideia" data-ir="5"><span>Ideia 1</span><b>Zerar e recomeçar em janeiro</b><em>Reabre o preço de todo o saldo</em></button>
+    <button class="ideia" data-ir="6"><span>Ideia 2</span><b>2.500 por modelo já em janeiro</b><em>Só depois da bobina em estoque</em></button>
+    <button class="ideia" data-ir="7"><span>Ideia 3</span><b>Todos no formato do Decor</b><em>A Alltak gasta mais bobina</em></button>
+    <button class="ideia" data-ir="8"><span>Ideia 4</span><b>Manuseio dentro do grupo Alko</b><em>Caminho sem volta</em></button>
+    <button class="ideia" data-ir="10"><span>Ideia 5</span><b>Usar rolos que sobram</b><em>Aprovado, com duas regras</em></button>
+  </div>
+  <div class="grao"></div>
+  <aside hidden>Vocês querem uma parcela fixa e entrega sem surpresa, e isso faz sentido. Testamos cada ideia na máquina.</aside>
+</section>
+
+<!-- 04 momento -->
+<section class="slide escuro momento" data-t="O momento">
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-paper.png" alt="75 LAB"></div><span class="eb"><b>(03)</b> O momento</span></div>
+  <h2 class="anima">Janeiro é o pior mês <span class="cl">para reabrir preço.</span></h2>
+  <div class="grafico anima d1">
+    <div class="heroi"><div class="num">+8,4%</div><p><b>Dólar em duas semanas</b>, de R$ 5,04 para R$ 5,46. Parafusos e insumos importados acompanham.</p></div>
+    <svg id="svgDolar" viewBox="0 0 870 450"></svg><div id="dicaDolar"></div>
+  </div>
+  <ul class="fatores anima d2">
+    <li><span>Dissídio · mão de obra</span><b>+10%</b><p>Em vigor na gráfica desde setembro. Não foi repassado ao contrato ativo, e mão de obra é o que mais pesa no catálogo.</p></li>
+    <li><span>Imposto · CBS em 2027</span><b>11,3%</b><p>Referência calculada pelo TCU. PIS e Cofins saem em 1º de janeiro e o Senado só fixa a alíquota até 15/12: orçar 12 meses agora é orçar no escuro.</p></li>
+    <li><span>Juros · Selic</span><b>13,75%</b><p>Dinheiro caro para quem carrega estoque, e janeiro ainda abre com mandato novo em Brasília.</p></li>
+  </ul>
+  <p class="fonte">Fontes: Banco Central, PTAX venda, 02/01 a 05/11/2026, e meta Selic; TCU, 28/10/2026; LC 214/2025; gráfica, reunião de 28/10/2026 (dissídio). Inflação: IPCA de 4,58% em 12 meses até setembro.</p>
+  <div class="grao"></div>
+  <aside hidden>Dólar, imposto novo, dissídio e juros mudam neste exato momento. Quem reabre o preço agora compra o risco inteiro.</aside>
+</section>
+
+<!-- 05 simulador -->
+<section class="slide claro simula" data-t="Zerar custa quanto">
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(04)</b> Ideia 1 · Zerar o contrato</span></div>
+  <h2 class="anima">Zerar troca um preço <span class="ca">travado</span> <span class="ap">por um preço em aberto.</span></h2>
+  <div class="trav anima d1">
+    <span class="eb"><b>Contrato ativo</b> · 61.736 catálogos</span>
+    <div class="num">R$ 1.193.490</div>
+    <ul>
+      <li><svg><use href="#i-ok"/></svg>Preço de março mantido até o fim</li>
+      <li><svg><use href="#i-ok"/></svg>Capas de todo o saldo já impressas</li>
+      <li><svg><use href="#i-ok"/></svg>Dissídio de setembro não repassado</li>
+      <li><svg><use href="#i-ok"/></svg>Formatos aprovados, sem refazer nada</li>
+    </ul>
+  </div>
+  <div class="aberto anima d2">
+    <div class="cab"><span class="eb"><b>Se o saldo for reorçado</b></span><span class="cta"><svg><use href="#i-mao"/></svg>Arraste para simular</span></div>
+    <div class="res"><div class="num" id="rsMais">+ R$ 119.349</div><span id="rsPct">com 10%</span></div>
+    <p class="exp">a mais pelos mesmos catálogos, antes dos 28.264 novos.</p>
+    <input id="rg" type="range" min="0" max="15" step="0.5" value="10" aria-label="Reajuste simulado em porcentagem">
+    <div class="marcos"><span style="left:0;transform:none">0%</span><span style="left:30.5%">IPCA<br>4,58%</span><span style="left:66.7%">Dissídio<br>10%</span><span style="left:100%;transform:translateX(-100%)">15%</span></div>
+    <div class="cen">
+      <div><b>+ R$ 54.662</b>se subir só a inflação</div>
+      <div><b>+ R$ 119.349</b>se subir como o dissídio</div>
+      <div><b>+ R$ 179.024</b>se somar dólar e imposto</div>
+    </div>
+  </div>
+  <p class="fonte">Simulação sobre o valor do saldo a preço de hoje. O reajuste real depende do orçamento da gráfica, ainda não feito.</p>
+  <div class="grao"></div>
+  <aside hidden>Do lado esquerdo, o que já está garantido. Do lado direito, o que passa a estar em aberto. Arraste e veja o tamanho da conta.</aside>
+</section>
+
+<!-- 06 prazo -->
+<section class="slide marinho prazo" data-t="2.500 por mês">
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-paper.png" alt="75 LAB"></div><span class="eb"><b>(05)</b> Ideia 2 · 2.500 por mês</span></div>
   <div class="esq">
-    <span class="k" data-a>O que foi realizado</span>
-    <h2 data-a style="--d:1">Entregamos o que a bobina permitiu.</h2>
-    <span class="gig num" data-a style="--d:2" data-cu="33204">33.204</span>
-    <span class="sub" data-a style="--d:3">de 95.000 catálogos · 35% do acordo</span>
-    <span class="sub" data-a style="--d:3;font-weight:600;margin-top:2px">Saldo: <b>61.796</b> · R$ 1.195.350</span>
+    <h2 class="anima">Zerar em janeiro não adianta <span class="cl">nenhuma entrega.</span></h2>
+    <div class="mes anima d1">Abril</div>
+    <p class="sob anima d2">é quando sai a primeira entrega mensal se o contrato novo começar com bobina em janeiro. O ritmo funciona, mas só depois do tempo de produção.</p>
   </div>
-  <div class="med">
-    <div class="lin" data-a style="--d:2"><div class="top">Decor <span>13.264 de 30.000 · saldo 16.736</span></div><div class="barra"><i style="--w:44.2%;background:var(--gold)"></i></div></div>
-    <div class="lin" data-a style="--d:3"><div class="top">Wraps <span>0 de 30.000 · saldo 30.000</span></div><div class="barra"><i style="--w:0%"></i></div></div>
-    <div class="lin" data-a style="--d:4"><div class="top">Sign <span>15.000 de 30.000 · saldo 15.000</span></div><div class="barra"><i style="--w:50%;background:var(--orange)"></i></div></div>
-    <div class="lin" data-a style="--d:5"><div class="top">Book Decor <span>4.940 de 5.000 · saldo 60</span></div><div class="barra"><i style="--w:98.8%;background:var(--navy)"></i></div></div>
-    <div class="travas" data-a style="--d:6">
-      <div class="trava"><b>Wraps sem bobina</b>Capas já impressas. A produção começa quando o adesivo chegar.</div>
-      <div class="trava"><b>Decor com 1.736 abertas</b>Dependem de 17 produtos. Lista enviada à Alltak em 23/10.</div>
+  <div class="escada">
+    <div class="deg"><span>Janeiro</span><b>Bobina chega</b></div>
+    <div class="deg"><span>Jan a mar</span><b>Impressão do lote por máquina</b></div>
+    <div class="deg"><span>Fev a mar</span><b>Manuseio e acabamento</b></div>
+    <div class="deg"><span>A partir de abril</span><b>2.500 por modelo, mês a mês</b></div>
+  </div>
+  <div class="cond anima d3">
+    <div><b>Lote antes de ritmo</b><p>A gráfica imprime todo o lote de um modelo e só depois monta. Decor em uma máquina, Sign e Wraps em outra.</p></div>
+    <div><b>10.000 na primeira remessa</b><p>Com rolo para cerca de 10 mil catálogos a produção gira. Com rolo para 2.500, a janela fica grande demais.</p></div>
+    <div><b>Vale para o contrato novo</b><p>Com o saldo fechado e estoque de bobina na gráfica, a recorrência que vocês pediram entra sem esse vazio.</p></div>
+  </div>
+  <p class="fonte">Fonte: gráfica, reunião de 28/10/2026. Prazo estimado a partir da chegada da bobina.</p>
+  <div class="grao"></div>
+  <aside hidden>A recorrência é viável, a gráfica confirmou. O que muda é o começo: existe um tempo de máquina entre a bobina e o primeiro lote mensal.</aside>
+</section>
+
+<!-- 07 formatos -->
+<section class="slide claro formato" data-t="Formatos">
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(06)</b> Ideia 3 · Formato único</span></div>
+  <h2 class="anima">Mudar 90.000 catálogos <span class="ap">para caber em um expositor?</span> <span class="ca">A conta inverte.</span></h2>
+  <div class="lams anima d1">
+    <div class="lam"><div class="slot" style="border-color:transparent"><img src="assets/lam-decor.jpg" alt="Lâmina real do catálogo Decor" style="width:310px;height:191px"></div><h3>Decor</h3><p>15,5 x 9,5 cm · a linha pontilhada</p><div class="x">1x<small>consumo igual ao de hoje</small></div></div>
+    <div class="lam"><div class="slot"><img src="assets/lam-wraps.jpg" alt="Lâmina real do catálogo Wraps" style="width:250px;height:150px"></div><h3>Wraps</h3><p>12,5 x 7,5 cm · hoje</p><div class="x">1,6x<small>mais bobina por lâmina</small></div></div>
+    <div class="lam"><div class="slot"><img src="assets/lam-sign.jpg" alt="Capa real do catálogo Signs" style="width:223px;height:114px"></div><h3>Sign</h3><p>11,2 x 5,7 cm · hoje</p><div class="x">2,3x<small>mais bobina por lâmina</small></div></div>
+  </div>
+  <ul class="pq anima d2">
+    <li><b>A bobina é da Alltak</b>Para a gráfica muda pouco. Quem paga o adesivo a mais é a Alltak.</li>
+    <li><b>Menos lâminas por folha</b>Mais capa, mais impressão e mais hora de máquina em cada lote.</li>
+    <li><b>Reduzir também não serve</b>Estampa do Sign perde leitura. O Decor perde espaço de informação.</li>
+  </ul>
+  <div class="virada anima d3"><strong>O problema é o expositor.</strong>Trocar o expositor mexe em um lote. Trocar o catálogo mexe em 90.000 unidades e nas capas que já estão prontas.</div>
+  <p class="fonte">Fonte: área de corte medida nos arquivos de produção dos catálogos 2026, em escala nesta tela; gráfica, reunião de 28/10/2026.</p>
+  <div class="grao"></div>
+  <aside hidden>As lâminas estão em escala. Levar tudo para o formato Decor faz o Sign consumir mais que o dobro. A saída é adaptar o expositor.</aside>
+</section>
+
+<!-- 08 manuseio -->
+<section class="slide escuro manuseio" data-t="Manuseio">
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-paper.png" alt="75 LAB"></div><span class="eb"><b>(07)</b> Ideia 4 · Manuseio separado</span></div>
+  <h2 class="anima">Separar o manuseio <span class="cl">é caminho sem volta.</span></h2>
+  <div class="raia r1 anima d1">
+    <div class="nome">Na mesma linha<small>como é hoje</small></div>
+    <div class="pa"><b>Imposição</b>A folha é montada pensando no acabamento.</div>
+    <div class="pa"><b>Impressão</b>Sequência certa de imagens por folha.</div>
+    <div class="pa"><b>Intercalação</b>Em bases de 4 lâminas, não uma a uma.</div>
+    <div class="pa"><b>Refile</b>Corte do bloco inteiro, depois o canto.</div>
+    <div class="pa"><b>Pronto</b>Parafuso, shrink e caixa, na mesma casa.</div>
+  </div>
+  <div class="raia r2 anima d2">
+    <div class="nome">Em duas casas<small>gráfica e grupo Alko</small></div>
+    <div class="pa"><b>Imposição</b>Perde a engenharia voltada ao acabamento.</div>
+    <div class="pa"><b>Impressão</b>Cada folha sai sem saber quem monta.</div>
+    <div class="pa ruim"><b>Refile</b>Lâmina cortada uma a uma, ainda na gráfica.</div>
+    <div class="pa ruim"><b>Transporte</b>Mais uma etapa, mais perda e mais prazo.</div>
+    <div class="pa ruim"><b>Montagem</b>Intercalar uma a uma, sem canteadeira.</div>
+  </div>
+  <div class="volta anima d3">
+    <div class="nome">E depois?</div>
+    <div><b>Se não funcionar</b>Lâmina refilada não volta para a linha da gráfica. O retrabalho tende a custar mais do que a economia buscada.</div>
+    <div><b>Decisão com número</b>A gráfica abre o custo por etapa no contrato novo. Com preço com e sem manuseio na mesa, a Alltak decide olhando a conta.</div>
+  </div>
+  <p class="fonte">Fonte: gráfica, reunião de 28/10/2026. Estudo de custo por etapa em andamento.</p>
+  <div class="grao"></div>
+  <aside hidden>O acabamento nasce na impressão. Separar as duas coisas desmonta a linha, e depois não dá para voltar sem pagar caro.</aside>
+</section>
+
+<!-- 09 caminhos -->
+<section class="slide claro caminhos" data-t="Três caminhos">
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(08)</b> Três caminhos</span></div>
+  <h2 class="anima">Três caminhos. <span class="ap">Só um dá</span> <span class="ca">preço e ritmo.</span></h2>
+  <div class="gt anima d1">
+    <div class="cab"><span></span><div class="ms"><span>nov/26</span><span>dez</span><span>jan/27</span><span>fev</span><span>mar</span><span>abr</span><span>mai</span><span>jun</span><span>jul</span></div><span></span></div>
+    <div class="ln">
+      <div class="rot"><span>Caminho A</span><b>O que a Alltak pediu</b></div>
+      <div class="tr"><div class="sg pr t1" style="left:0;width:22.22%">Material parado</div><div class="sg pr t1" style="left:22.22%;width:33.33%">Reorçar, bobina e impressão</div><div class="sg nv t1" style="left:55.55%;width:44.45%">7.500 por mês, preço novo</div><div class="sg nv t2" style="left:22.22%;width:77.78%">Contrato novo de 90.000: o saldo entra aqui</div></div>
+      <dl><dt>Preço</dt><dd>Todo o saldo reaberto</dd><dt>Ritmo</dt><dd>Abril de 2027</dd><dt>O que pesa</dt><dd><strong>R$ 55 mil a R$ 179 mil a mais</strong> e capas paradas</dd></dl>
+    </div>
+    <div class="ln">
+      <div class="rot"><span>Caminho B</span><b>O que o fornecedor trouxe</b></div>
+      <div class="tr"><div class="sg tv t1" style="left:0;width:55.55%">61.736 no preço de hoje, até março</div><div class="sg pr t1" style="left:55.55%;width:44.45%">Novo ciclo, do zero</div><div class="sg pr t2" style="left:55.55%;width:44.45%">2027 e 2028 a planejar</div></div>
+      <dl><dt>Preço</dt><dd>Saldo travado</dd><dt>Ritmo</dt><dd>Só depois do novo planejamento</dd><dt>O que pesa</dt><dd><strong>Meses sem contrato</strong> depois de março</dd></dl>
+    </div>
+    <div class="ln rec">
+      <div class="rot"><span>Caminho C · recomendado</span><b>Fechar até fevereiro</b></div>
+      <div class="tr"><div class="sg lm t1" style="left:0;width:44.44%">61.736 no preço de hoje</div><div class="sg nv t1" style="left:44.44%;width:55.56%;background:var(--azul)">Contrato novo: 7.500 por mês</div><div class="sg pr t2" style="left:0;width:44.44%">Desenhar o contrato novo em paralelo</div><div class="sg nv t2" style="left:44.44%;width:55.56%;background:var(--azul)">12 meses, preço novo, formatos revistos</div></div>
+      <dl><dt>Preço</dt><dd>Saldo travado, novo só no volume novo</dd><dt>Ritmo</dt><dd>Março de 2027</dd><dt>O que pesa</dt><dd><strong>Bobina e pagamento</strong> concentrados até fevereiro</dd></dl>
     </div>
   </div>
-  <div class="fonte">Fonte: controle de entregas da 75 LAB e reuniões de 22/10 e 28/10/2026. Valores a preço vigente.</div>
+  <p class="fonte">Fontes: proposta da Alltak; gráfica, reunião de 28/10/2026; simulação da tela 5. Caminho A considera bobina em janeiro. Prazos dependem da chegada das bobinas.</p>
+  <div class="grao"></div>
+  <aside hidden>O caminho C leva um mês a mais que o calendário original e chega ao ritmo mensal antes do pedido original. O custo é concentrar bobina e pagamento até fevereiro.</aside>
 </section>
 
-<!-- 05 -->
-<section class="slide s-ped" data-t="Pedido">
-  <span class="k" data-a>O que a Alltak pediu</span>
-  <h2 data-a style="--d:1">Zerar, somar e receber todo mês.</h2>
-  <div class="eq" data-a style="--d:2">
-    <div class="c"><span class="num" data-cu="61796">61.796</span><small>Saldo do acordo atual</small></div>
-    <div class="op">+</div>
-    <div class="c"><span class="num" data-cu="28204">28.204</span><small>Novos: 13.264 Decor e 15.000 Sign, menos 60 Book</small></div>
-    <div class="op">=</div>
-    <div class="c fim"><span class="num" data-cu="90000">90.000</span><small>Contrato novo a partir de janeiro de 2027</small></div>
-  </div>
-  <div class="ped-baixo">
-    <div class="ritmo" data-a style="--d:3">
-      <span class="num">7.500 por mês</span>
-      <small>2.500 de cada modelo, 12 meses. Em Decor, Wraps e Sign são R$ 142.000 por mês a preço vigente.</small>
-      <div class="aviso">O objetivo é legítimo: mais controle e catálogo sempre atualizado, porque os lançamentos são rápidos.</div>
-    </div>
-    <div class="pedidos" data-a style="--d:4">
-      <div class="pedido"><svg class="i"><use href="#i-check"/></svg>Encerrar o contrato atual e abrir outro</div>
-      <div class="pedido"><svg class="i"><use href="#i-check"/></svg>Lançamentos em catálogo especial, indo ao regular no mês seguinte</div>
-      <div class="pedido"><svg class="i"><use href="#i-check"/></svg>Saber quantos catálogos saem por bobina, com perda</div>
-      <div class="pedido"><svg class="i"><use href="#i-check"/></svg>Aproveitar melhor os rolos de adesivo</div>
-      <div class="pedido"><svg class="i"><use href="#i-check"/></svg>Manuseio separado, com participação da ALCO</div>
-      <div class="pedido"><svg class="i"><use href="#i-check"/></svg>Harmonizar os formatos dos catálogos</div>
+<!-- 10 fim -->
+<section class="slide lime fim" data-t="Decisões">
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(09)</b> Próximo passo</span></div>
+  <div class="esq">
+    <h2 class="anima">Fechamos até fevereiro?</h2>
+    <p class="lead anima d1">Damos um mês a mais que o calendário original para terminar sem pressa. Em março, o contrato novo começa com o ritmo que vocês pediram.</p>
+    <div class="entregas anima d2">
+      <div><span>Dezembro</span><b>1.736</b>Decor, fecha o lote aberto</div>
+      <div><span>Janeiro</span><b>30.000</b>15 mil Decor e 15 mil Sign</div>
+      <div><span>Fevereiro</span><b>30.000</b>Wraps, contrato concluído</div>
     </div>
   </div>
-  <div class="fonte">Fonte: reunião presencial na Alltak, 22/10/2026, e proposta de novo contrato.</div>
+  <div class="dirr">
+    <div class="chk-h anima"><span class="eb">Quatro decisões</span><span class="cta"><svg><use href="#i-mao"/></svg>Clique para marcar</span></div>
+    <button class="chk anima d1"><i><svg><use href="#i-ok"/></svg></i><div><small>Novembro · Alltak</small><b>Cronograma de bobinas</b><span>Primeira remessa para 10 mil catálogos. Rolos que sobram entram, com a mesma largura e m² na etiqueta.</span></div></button>
+    <button class="chk anima d1"><i><svg><use href="#i-ok"/></svg></i><div><small>Novembro · Alltak e 75 LAB</small><b>Faturar o que está pronto</b><span>Capas impressas e lote do Decor seguem para faturamento, sem esperar a última lâmina.</span></div></button>
+    <button class="chk anima d2"><i><svg><use href="#i-ok"/></svg></i><div><small>Dezembro · Alltak e 75 LAB</small><b>Aditivo até fevereiro</b><span>Mesmo escopo, mesmo preço, um mês a mais.</span></div></button>
+    <button class="chk anima d2"><i><svg><use href="#i-ok"/></svg></i><div><small>Até fevereiro · 75 LAB</small><b>Contrato novo pronto</b><span>12 meses com revisão anual, 7.500 por mês, formatos e expositor resolvidos, custo por etapa aberto.</span></div></button>
+    <a class="botao cheio seta so-tela anima d3" style="margin-top:18px" href="https://wa.me/5511986765634?text=Ol%C3%A1%2C%20vi%20o%20cen%C3%A1rio%20dos%20cat%C3%A1logos%20Alltak" target="_blank" rel="noopener">Fechar pelo WhatsApp</a>
+  </div>
+  <div class="assin anima d3">
+    <div>Daniel Coimbra, CEO · daniel.coimbra@75lab.com.br<br>Caique Becker, Head de Trade · caique.becker@75lab.com.br</div>
+    <small>75 LAB Estratégia, Design e Produção Ltda · CNPJ 55.470.982/0001-77<br>CENU, Torre Norte, Av. das Nações Unidas, 12.901, Brooklin, São Paulo, SP</small>
+  </div>
+  <div class="grao"></div>
+  <aside hidden>Quatro decisões destravam tudo. A primeira é a bobina. Com ela, o resto entra em sequência.</aside>
 </section>
 
-<!-- 06 -->
-<section class="slide s-gra" data-t="Gráfica">
-  <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:30px">
-    <div><span class="k" data-a>O que a gráfica respondeu</span>
-    <h2 data-a style="--d:1;font-size:46px;white-space:nowrap">Levamos cada pedido à gráfica. O cenário mudou.</h2></div>
-    <span class="cta" data-a style="--d:2;white-space:nowrap;padding-bottom:10px"><svg class="i"><use href="#i-mao"/></svg>Clique em cada pergunta</span>
-  </div>
-  <div class="gra" data-a style="--d:2">
-    <div class="perg" id="perg"></div>
-    <div class="resp" id="resp"></div>
-    <div class="tudo" id="tudo"></div>
-  </div>
-  <div class="fonte">Fonte: reunião com a gráfica em 28/10/2026.</div>
-</section>
-
-<!-- 07 -->
-<section class="slide navy s-cam" data-t="Caminhos">
-  <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:30px">
-    <div><span class="k" style="color:var(--lime)" data-a>Três caminhos</span>
-    <h2 data-a style="--d:1;font-size:46px">O mesmo volume muda muito conforme o caminho.</h2></div>
-    <span class="cta" data-a style="--d:2;white-space:nowrap;padding-bottom:8px;color:var(--lime)"><svg class="i"><use href="#i-mao"/></svg>Clique em cada caminho</span>
-  </div>
-  <div class="cam-abas" id="camAbas" data-a style="--d:2"></div>
-  <div class="cam-corpo" data-a style="--d:3">
-    <div class="gantt">
-      <div class="g-m" id="gMes"></div>
-      <div id="gLin"></div>
-      <div class="g-leg" id="gLeg"></div>
-      <div class="frase" id="camFrase"></div>
-    </div>
-    <div class="kpis" id="camKpi"></div>
-  </div>
-  <div class="fonte" id="camFonte">Conta da 75 LAB sobre os preços vigentes. Parcela mensal antes de qualquer revisão de preço.</div>
-</section>
-
-<!-- 08 -->
-<section class="slide light s-mat" data-t="Comparativo">
-  <span class="k" data-a>Lado a lado</span>
-  <h2 data-a style="--d:1;font-size:48px">Nenhum caminho é de graça. Um deles resolve mais.</h2>
-  <div class="ban" data-a style="--d:2"><svg class="i"><use href="#i-alerta"/></svg>Os três dependem da mesma coisa: um cronograma de bobinas com data.</div>
-  <div class="mat" data-a style="--d:3" id="mat"></div>
-</section>
-
-<!-- 09 -->
-<section class="slide s-rec" data-t="Recomendação">
-  <span class="k" data-a>Nossa recomendação</span>
-  <h2 data-a style="--d:1">Manter o contrato e mudar o ritmo.</h2>
-  <div class="soma" data-a style="--d:2"><span class="num">60.000 + 30.000</span><small>saldo no preço de hoje + volume novo = 90.000 em 2027</small></div>
-  <div class="esc">
-    <div class="deg" data-a style="--d:2"><span class="q">Agora · novembro e dezembro</span><h3>Fechar o lote aberto</h3><ul>
-      <li>Alltak envia os 17 produtos e as 1.736 do Decor saem</li>
-      <li>Material pronto entra em faturamento</li>
-      <li>Cronograma de bobinas assinado</li></ul><div class="fim"><span class="num">1.736</span><small>catálogos para fechar o primeiro lote do Decor</small></div></div>
-    <div class="deg" data-a style="--d:3"><span class="q">Janeiro de 2027</span><h3>Virar a chave para o mensal</h3><ul>
-      <li>Aditivo: saldo de 60.000 em 7.500 por mês, sem zerar nada</li>
-      <li>Catálogo Lançamentos no ar, cotado à parte</li>
-      <li>Formatos mantidos, expositores adaptados</li>
-      <li>Primeira entrega conta da chegada da bobina</li></ul><div class="fim"><span class="num">R$ 142 mil</span><small>por mês a preço vigente, em 30, 45 e 60 dias</small></div></div>
-    <div class="deg" data-a style="--d:4"><span class="q">Julho de 2027</span><h3>Somar o volume novo</h3><ul>
-      <li>Saldos de Decor e Sign terminam em junho</li>
-      <li>Entram 30.000 novos, 15.000 de cada, em preço revisto</li>
-      <li>Wraps segue no saldo até dezembro</li>
-      <li>Plano 2028 começa com o histórico real por bobina</li></ul><div class="fim"><span class="num">30.000</span><small>novos, em contrato de 12 meses com revisão anual</small></div></div>
-  </div>
-  <div class="fonte">As 1.736 do Decor e as 60 do Book saem do saldo antes de janeiro. Os 28.204 do pedido viram 30.000 para a cadência de 2.500 por mês fechar o ano cheio.</div>
-</section>
-
-<!-- 10 -->
-<section class="slide s-dec" data-t="Decisão">
-  <div class="dec-l">
-    <span class="k" style="color:var(--lime)" data-a>Próximo passo</span>
-    <h2 data-a style="--d:1">Quatro respostas para começar em janeiro.</h2>
-    <span class="cta" data-a style="--d:2;color:var(--lime);margin-bottom:12px"><svg class="i"><use href="#i-mao"/></svg>Clique para marcar o que ficou decidido</span>
-    <div class="decs" id="decs"></div>
-  </div>
-  <div class="fim-d" data-a style="--d:3">
-    <div class="anel"><svg viewBox="0 0 196 196"><circle class="tr" cx="98" cy="98" r="86"/><circle class="pg" id="anel" cx="98" cy="98" r="86"/></svg><div><span class="num" id="anelN">0/4</span><small>decididas</small></div></div>
-    <p>Com as quatro, a primeira entrega mensal sai conforme a bobina chega.</p>
-    <a class="zap" href="https://wa.me/5511986765634" target="_blank" rel="noopener"><svg class="i"><use href="#i-zap"/></svg>Fale conosco no WhatsApp</a>
-    <div class="inst">75 LAB Estratégia, Design e Produção Ltda<br>75lab.com.br · contato@75lab.com.br</div>
-  </div>
-</section>
-
-<div id="bot">
-  <button class="seta" id="prev" aria-label="Tela anterior"><svg class="i"><use href="#i-volta"/></svg></button>
-  <div id="trilha"></div>
-  <button class="seta" id="next" aria-label="Próxima tela"><svg class="i"><use href="#i-seta"/></svg></button>
-</div>
-
+  <div id="barra"><i></i></div>
+  <div id="nav"><button id="ant" aria-label="Tela anterior">‹</button><span id="cont">01 / 10</span><button id="prox" aria-label="Próxima tela">›</button></div>
 </div></div>
+<div id="cursor"></div>
 
 <script>
 (function(){
@@ -498,159 +514,101 @@ h2{font-size:54px;line-height:1.04;margin-top:10px}
 var $=function(s,c){return (c||document).querySelector(s)},$$=function(s,c){return [].slice.call((c||document).querySelectorAll(s))};
 var PDF=/[?&]pdf=1/.test(location.search);
 if(PDF)document.documentElement.classList.add("pdf");
-function ico(n){return '<svg class="i"><use href="#'+n+'"/></svg>'}
-function fmt(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,".")}
-
-/* cursor */
-var cur=$("#cur"),dot=$("#dot"),tx=innerWidth/2,ty=innerHeight/2,cx=tx,cy=ty;
-addEventListener("mousemove",function(e){tx=e.clientX;ty=e.clientY;document.body.classList.remove("hidecur");dot.style.transform="translate3d("+tx+"px,"+ty+"px,0)"});
-document.addEventListener("mouseleave",function(){document.body.classList.add("hidecur")});
-(function loop(){cx+=(tx-cx)*.22;cy+=(ty-cy)*.22;cur.style.transform="translate3d("+cx+"px,"+cy+"px,0)";requestAnimationFrame(loop)})();
-addEventListener("mouseover",function(e){document.body.classList.toggle("hot",!!e.target.closest("button,a"))});
-if(PDF){cur.style.display=dot.style.display="none";document.body.style.cursor="none"}
+function fmt(n){return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g,".")}
 
 /* palco */
 var stage=$("#stage");
-function fit(){var s=Math.min(innerWidth/1600,innerHeight/900);stage.style.transform="scale("+(s>0?s:1)+")"}
+function fit(){stage.style.transform="scale("+Math.min(innerWidth/1600,innerHeight/900)+")"}
 addEventListener("resize",fit);fit();
 
-/* 03 ondas */
-var ON=[["jun/26",20000],["jul/26",15000],["ago/26",0],["set/26",15000],["out/26",15000],["nov/26",15000],["dez/26",0],["jan/27",15000]];
-$("#ondas").style.gridTemplateColumns="repeat("+ON.length+",1fr)";
-$("#ondas").innerHTML=ON.map(function(o){return '<div class="onda'+(o[1]?"":" vz")+'"><span>'+(o[1]?fmt(o[1]):"")+'</span><i style="height:'+(o[1]?o[1]/20000*56:3)+'px"></i><small>'+o[0]+'</small></div>'}).join("");
-
-/* 06 gráfica */
-var G=[
- {p:"Dá para entregar 2.500 por modelo todo mês?",s:"cond",l:"Sim, com condição",h:"Dá, contando da chegada da bobina.",t:"A cadência é viável. Depois que o adesivo chega existe um período de impressão até atingir o ritmo mensal.",e:"O cronograma de bobinas vira a primeira linha do contrato."},
- {p:"A estrutura aguenta o volume?",s:"sim",l:"Sim",h:"Há máquina, galpão e time dedicado.",t:"A mesma máquina atende todos os catálogos. Nova impressora de cama plana, galpão próximo e espaço para todo o volume de bobinas.",e:"Capacidade não é o gargalo. O gargalo é o adesivo."},
- {p:"Dá para aproveitar retalhos?",s:"cond",l:"Sim, com condição",h:"Sim, se os rolos tiverem a mesma largura.",t:"Comprimentos diferentes são aceitos, desde que as larguras sejam padronizadas e cada rolo venha identificado em metros quadrados.",e:"Bobina identificada reduz perda e evita mistura entre catálogos."},
- {p:"A gráfica pode só imprimir e cortar?",s:"nao",l:"Não compensa",h:"Talvez, mas não é efetivo.",t:"A impressão é planejada em função do acabamento e da intercalação das lâminas. Separar o manuseio desmonta essa engenharia.",e:"Manuseio segue junto da impressão. A ALCO pode ser estudada em etapas pontuais."},
- {p:"E se harmonizarmos os formatos para o Decor?",s:"nao",l:"Muda para a Alltak",h:"Para a gráfica não muda. Para a Alltak, gasta mais bobina.",t:"Padronizar pede mais adesivo e mais tempo de máquina. No Sign, reduzir o tamanho prejudica a leitura das estampas.",e:"Adaptar os expositores custa menos que alterar os catálogos."},
- {p:"Quantos catálogos saem por bobina?",s:"cond",l:"Conta em andamento",h:"A resposta vem das notas contra o produzido.",t:"O cálculo é por metro quadrado, cruzando as notas de bobina com o volume produzido e já considerando o descarte.",e:"Essa conta sustenta o cronograma e o plano de 2028."},
- {p:"O preço de hoje vale para um contrato novo?",s:"nao",l:"Não vale",h:"Dissídio de 10% e dólar em alta levam a reajuste.",t:"O dissídio entrou em setembro. Um contrato novo nasce com preço novo, e a recomendação é de 12 meses com revisão anual.",e:"Zerar o contrato coloca todo o volume no preço novo."}
-];
-var gSel=0;
-$("#perg").innerHTML=G.map(function(g,k){return '<button data-g="'+k+'"><span>'+g.p+'</span>'+ico("i-seta")+'<i></i></button>'}).join("");
-$("#tudo").innerHTML=G.map(function(g){return '<div><em class="q">'+g.p+'</em><span class="selo '+g.s+'">'+g.l+'</span><h3>'+g.h+'</h3><p>'+g.e+'</p></div>'}).join("");
-function rG(){
-  var g=G[gSel];
-  $$("#perg button").forEach(function(b,k){b.classList.toggle("sel",k===gSel)});
-  $("#resp").innerHTML='<span class="selo '+g.s+'">'+g.l+'</span><h3>'+g.h+'</h3><p>'+g.t+'</p><div class="efeito"><span>O que isso muda</span>'+g.e+'</div>';
+/* cursor */
+var cur=$("#cursor");
+if(!PDF&&matchMedia("(pointer:fine)").matches){
+  addEventListener("mousemove",function(e){document.body.classList.add("tem-mouse");cur.style.left=e.clientX+"px";cur.style.top=e.clientY+"px";cur.classList.toggle("sobre",!!e.target.closest("button,a,input"))});
 }
-rG();
-
-/* 07 caminhos */
-var MES=["nov","dez","jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"];
-$("#gMes").innerHTML='<span></span>'+MES.map(function(m,i){return '<span class="'+(i===2?"ano":"")+'">'+m+(i===0?"/26":i===2?"/27":"")+'</span>'}).join("");
-var CAM=[
- {n:"Caminho A",t:"O que a Alltak pediu",cls:"",
-  l:[["Decor",[[2,12,"novo","30.000 · contrato novo"]]],["Wraps",[[2,12,"novo","30.000 · contrato novo"]]],["Sign",[[2,12,"novo","30.000 · contrato novo"]]]],
-  f:"Entrega mensal já em janeiro, mas todo o saldo volta para a mesa e entra no preço novo.",
-  k:[["Contrato atual","Encerrado","Saldo de 61.796 vira contrato novo"],["Ritmo","7.500 por mês","12 meses, de janeiro a dezembro"],["Parcela mensal","R$ 142.000","Antes do reajuste, sobre os 90.000"],["Atenção","Material pronto parado","Formatos novos pedem mais bobina"]]},
- {n:"Caminho B",t:"O que a gráfica trouxe",cls:"",
-  l:[["Decor",[[1,4,"saldo","16.736"],[5,9,"plan","Novo ciclo, a planejar do zero"]]],["Wraps",[[1,4,"saldo","30.000"],[5,9,"plan","Novo ciclo, a planejar do zero"]]],["Sign",[[1,4,"saldo","15.000"],[5,9,"plan","Novo ciclo, a planejar do zero"]]]],
-  f:"Preço protegido e nada muda até março, mas exige todas as bobinas e concentra o volume em quatro meses.",
-  k:[["Contrato atual","Cumprido até março","Formatos e manuseio como estão"],["Ritmo","15.449 por mês","De dezembro a março, se a bobina chegar"],["Parcela mensal","R$ 299 mil","R$ 1,2 milhão concentrado no período"],["Depois","Ciclo 2027-2028","Contrato de 12 meses, preço novo"]]},
- {n:"Caminho C",t:"Nossa recomendação",cls:"rec",
-  l:[["Decor",[[0,2,"lote","1.736"],[2,6,"saldo","15.000 · saldo"],[8,6,"novo","15.000 · novos"]]],["Wraps",[[2,12,"saldo","30.000 · saldo"]]],["Sign",[[2,6,"saldo","15.000 · saldo"],[8,6,"novo","15.000 · novos"]]]],
-  f:"O ritmo que a Alltak pediu, com o saldo protegido e o lote aberto resolvido antes de virar a chave.",
-  k:[["Contrato atual","Mantido, com aditivo","Saldo de 60.000 vira entrega mensal"],["Ritmo","7.500 por mês","12 meses, de janeiro a dezembro"],["Parcela mensal","R$ 142.000","Só o volume novo tem preço revisto"],["Atenção","Faturar material pronto","Alltak define com o Financeiro"]]}
-];
-var cSel=2,LEG=[["saldo","var(--blue)","Saldo, preço de hoje"],["novo","var(--lime)","Volume novo, preço revisto"],["lote","var(--cream)","Fechamento do lote"],["plan","repeating-linear-gradient(135deg,rgba(255,255,255,.4) 0 3px,transparent 3px 6px)","A planejar"]];
-$("#camAbas").innerHTML=CAM.map(function(c,k){return '<button class="'+c.cls+'" data-c="'+k+'"><span>'+c.n+'</span><b>'+c.t+'</b><i></i></button>'}).join("");
-function rC(){
-  var c=CAM[cSel];
-  $$("#camAbas button").forEach(function(b,k){b.classList.toggle("sel",k===cSel)});
-  $("#gLin").innerHTML=c.l.map(function(r){return '<div class="g-l"><b>'+r[0]+'</b><div class="g-tr">'+r[1].map(function(s){return '<div class="seg '+s[2]+'" style="left:'+(s[0]/14*100)+'%;width:'+(s[1]/14*100)+'%">'+s[3]+'</div>'}).join("")+'</div></div>'}).join("");
-  var usa={};c.l.forEach(function(r){r[1].forEach(function(s){usa[s[2]]=1})});
-  $("#gLeg").innerHTML=LEG.filter(function(l){return usa[l[0]]}).map(function(l){return '<span><i style="background:'+l[1]+'"></i>'+l[2]+'</span>'}).join("");
-  $("#camFrase").textContent=c.f;
-  $("#camKpi").innerHTML=c.k.map(function(k){return '<div class="kpi"><span>'+k[0]+'</span><b>'+k[1]+'</b><small>'+k[2]+'</small></div>'}).join("");
-}
-rC();
-
-/* 08 matriz */
-var MT=[
- ["Entrega mensal já em 2027","s Sim","n Só depois de março","s Sim"],
- ["Saldo protegido no preço de hoje","n Não","s Sim","s Sim"],
- ["Parcela mensal previsível para a Alltak","s Sim","n Concentra em 4 meses","s Sim"],
- ["Formatos atuais, sem gastar mais bobina","n Não","s Sim","s Sim"],
- ["Lançamentos em catálogo próprio","s Sim","n Próximo ciclo","s Sim"],
- ["Material pronto resolvido agora","n Não","s Sim","s Sim"],
- ["Sem desembolso antes de receber","s Sim","n Não","n Não"],
- ["Contrato único, sem aditivo","s Sim","s Sim","n Não"]
-];
-var mh='<div class="h" style="justify-content:flex-start;padding-left:0"></div><div class="h">A · O que a Alltak pediu</div><div class="h">B · O que a gráfica trouxe</div><div class="h rec">C · Nossa recomendação</div>';
-MT.forEach(function(r){
-  mh+='<div style="padding-left:0">'+r[0]+'</div>';
-  [1,2,3].forEach(function(i){var t=r[i].split(" "),b=t.shift();mh+='<div class="c'+(i===3?" rec":"")+'"><span class="bol '+b+'"></span>'+t.join(" ")+'</div>'});
-});
-$("#mat").innerHTML=mh;
-
-/* 10 decisões */
-var DC=[
- ["Cronograma de bobinas com data","Decor, Wraps e Sign, com a lista de 23/10 respondida","Compras"],
- ["Material pronto entra em faturamento","Capas e catálogos já produzidos e armazenados","Financeiro"],
- ["Caminho e aditivo de janeiro","Saldo em 7.500 por mês, volume novo em julho","Marketing"],
- ["Formatos e expositores","Mantém os catálogos e adapta os expositores","Marketing e Design"]
-];
-$("#decs").innerHTML=DC.map(function(d,k){return '<button data-d="'+k+'"><span class="ck">'+ico("i-check")+'</span><span><b>'+d[0]+'</b><small>'+d[1]+'</small></span><em>'+d[2]+'</em></button>'}).join("");
-$("#decs").addEventListener("click",function(e){var b=e.target.closest("[data-d]");if(!b)return;b.classList.toggle("ok");
-  var n=$$("#decs .ok").length;$("#anelN").textContent=n+"/4";$("#anel").style.strokeDashoffset=540-540*n/4});
 
 /* navegação */
-var S=$$(".slide"),N=S.length,i=0,DARK={};
-var TR=[["Acordado",2],["Realizado",3],["Pedido",4],["Gráfica",5],["Caminhos",6],["Comparativo",7],["Recomendação",8],["Decisão",9]];
-$("#trilha").innerHTML=TR.map(function(t){return '<button data-go="'+(t[1]+1)+'">'+t[0]+'</button>'}).join("");
-var timer=null,parado=false;
-function paraTudo(){parado=true;clearTimeout(timer);$$(".rodando").forEach(function(b){b.classList.remove("rodando")})}
-function roda(sel,total,fn,base){
-  clearTimeout(timer);if(parado||PDF)return;
-  var bs=$$(sel),b=bs[fn()];
-  bs.forEach(function(x){x.classList.remove("rodando")});
-  var t=base;b.style.setProperty("--t",t+"ms");void b.offsetWidth;b.classList.add("rodando");
-  timer=setTimeout(function(){var nx=(fn()+1)%total;fn(nx);roda(sel,total,fn,base)},t);
+var T=$$(".slide"),at=0;
+function ir(n,sem){
+  n=Math.max(0,Math.min(T.length-1,n));at=n;
+  T.forEach(function(s,i){s.classList.toggle("on",i===n)});
+  $("#barra i").style.width=((n+1)/T.length*100)+"%";
+  $("#cont").textContent=("0"+(n+1)).slice(-2)+" / "+T.length;
+  $("#nav").classList.toggle("tinta",/claro|lime|azul/.test(T[n].className));
+  if(!sem)history.replaceState(null,"","#"+(n+1));
+  entrar(T[n]);
 }
-function gFn(v){if(v!==undefined){gSel=v;rG()}return gSel}
-function cFn(v){if(v!==undefined){cSel=v;rC()}return cSel}
-function cu(root){$$("[data-cu]",root).forEach(function(el){
-  var end=+el.dataset.cu;if(PDF){el.textContent=fmt(end);return}
-  var t0=performance.now();(function st(t){var p=Math.min(1,(t-t0)/1000);p=1-Math.pow(1-p,3);el.textContent=fmt(Math.round(end*p));if(p<1)requestAnimationFrame(st)})(t0)})}
-function go(n,noHash){
-  n=Math.max(0,Math.min(N-1,n));i=n;
-  S.forEach(function(s,k){s.classList.toggle("on",k===i)});
-  var el=S[i],light=el.classList.contains("light");
-  document.body.classList.toggle("tema-light",light);document.body.classList.toggle("tema-dark",!light);
-  $("#w75").src="assets/75lab-wordmark-"+(light?"black":"paper")+".png";
-  $("#top").style.visibility=i===0?"hidden":"visible";
-  $("#bot").style.visibility=i===0?"hidden":"visible";
-  $("#cont").textContent=String(i+1).padStart(2,"0")+" / "+String(N).padStart(2,"0");
-  $$("#trilha button").forEach(function(b){b.classList.toggle("on",+b.dataset.go-1<=i)});
-  cu(el);
-  clearTimeout(timer);parado=false;$$(".rodando").forEach(function(b){b.classList.remove("rodando")});
-  if(el.classList.contains("s-gra")){gSel=0;rG();roda("#perg button",G.length,gFn,8000)}
-  if(el.classList.contains("s-cam")&&!PDF){cSel=0;rC();roda("#camAbas button",CAM.length,cFn,9500)}
-  if(!noHash)history.replaceState(null,"","#"+(i+1));
-  window.__tela=i+1;
+function entrar(s){
+  $$(".bl .tr i",s).forEach(function(i){i.style.width=i.dataset.w+"%"});
+  if(s.classList.contains("simula")&&!PDF)autoSim();
 }
-document.addEventListener("click",function(e){
-  var g=e.target.closest("[data-g]");if(g){paraTudo();gSel=+g.dataset.g;rG();return}
-  var c=e.target.closest("[data-c]");if(c){paraTudo();cSel=+c.dataset.c;rC();return}
-  var d=e.target.closest("[data-go]");if(d){go(+d.dataset.go-1);return}
+addEventListener("keydown",function(e){
+  if(e.target.id==="rg"&&(e.key==="ArrowLeft"||e.key==="ArrowRight"))return;
+  if(["ArrowRight","PageDown"," "].indexOf(e.key)>-1){e.preventDefault();ir(at+1)}
+  if(["ArrowLeft","PageUp"].indexOf(e.key)>-1){e.preventDefault();ir(at-1)}
+  if(e.key==="Home")ir(0);if(e.key==="End")ir(T.length-1);
 });
-$("#prev").onclick=function(){go(i-1)};$("#next").onclick=function(){go(i+1)};
-addEventListener("keydown",function(e){if(["ArrowRight","PageDown"," "].indexOf(e.key)>-1){e.preventDefault();go(i+1)}if(["ArrowLeft","PageUp"].indexOf(e.key)>-1){e.preventDefault();go(i-1)}});
-var xi=null;addEventListener("touchstart",function(e){xi=e.touches[0].clientX},{passive:true});
-addEventListener("touchend",function(e){if(xi===null)return;var d=e.changedTouches[0].clientX-xi;if(Math.abs(d)>60)go(i+(d<0?1:-1));xi=null},{passive:true});
-function doHash(){var h=parseInt(location.hash.slice(1),10);go(h>=1&&h<=N?h-1:0,true)}
-addEventListener("hashchange",doHash);doHash();
+$("#ant").onclick=function(){ir(at-1)};$("#prox").onclick=function(){ir(at+1)};
+$$("[data-ir]").forEach(function(b){b.onclick=function(){ir(+b.dataset.ir-1)}});
+var tx=0;addEventListener("touchstart",function(e){tx=e.touches[0].clientX},{passive:true});
+addEventListener("touchend",function(e){if(e.target.id==="rg")return;var d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>60)ir(at+(d<0?1:-1))},{passive:true});
+addEventListener("hashchange",function(){ir((parseInt(location.hash.slice(1))||1)-1,true)});
 
-/* gerador de PDF: a tela de caminhos vira uma página por caminho */
-window.__pdfEstados=function(){return S[i].classList.contains("s-cam")?CAM.length:0};
-window.__pdfEstado=function(k){cSel=k;rC()};
+/* dólar: PTAX venda, Banco Central */
+var D=[["01-02",5.4372],["01-07",5.388],["01-12",5.376],["01-15",5.3846],["01-20",5.379],["01-23",5.2879],["01-28",5.1838],["02-02",5.2587],["02-05",5.258],["02-10",5.2021],["02-13",5.2288],["02-20",5.2006],["02-25",5.144],["03-02",5.2001],["03-05",5.2447],["03-10",5.1622],["03-13",5.2541],["03-18",5.2112],["03-23",5.244],["03-26",5.2308],["03-31",5.2194],["04-06",5.1532],["04-09",5.0821],["04-14",4.9806],["04-17",4.9695],["04-23",4.9539],["04-28",4.9878],["05-04",4.9587],["05-07",4.917],["05-11",4.8973],["05-12",4.8977],["05-15",5.0654],["05-20",5.0301],["05-25",5.0072],["05-28",5.0517],["06-02",5.016],["06-08",5.1695],["06-11",5.1478],["06-16",5.078],["06-19",5.1442],["06-24",5.2098],["06-29",5.1717],["07-02",5.1945],["07-07",5.1458],["07-10",5.1088],["07-15",5.0727],["07-20",5.0894],["07-23",5.0807],["07-28",5.1177],["07-31",5.0773],["08-05",5.1154],["08-10",5.0963],["08-13",5.1859],["08-18",5.2043],["08-21",5.1625],["08-26",5.1604],["08-31",5.1816],["09-03",5.0962],["09-09",5.0979],["09-14",5.1696],["09-17",5.1521],["09-22",5.1161],["09-25",5.1991],["09-30",5.1809],["10-05",4.9859],["10-08",5.0119],["10-14",5.0441],["10-19",5.0564],["10-22",5.0383],["10-27",5.3346],["10-30",5.4212],["11-05",5.4621]];
+(function(){
+  var svg=$("#svgDolar"),W=870,H=450,mL=46,mR=70,mT=26,mB=30,yMin=4.8,yMax=5.6;
+  function X(i){return mL+i/(D.length-1)*(W-mL-mR)}
+  function Y(v){return mT+(yMax-v)/(yMax-yMin)*(H-mT-mB)}
+  var h="";
+  [4.8,5,5.2,5.4,5.6].forEach(function(v){h+='<line class="g" x1="'+mL+'" x2="'+(W-mR)+'" y1="'+Y(v)+'" y2="'+Y(v)+'"/><text x="0" y="'+(Y(v)+4)+'">'+v.toFixed(2).replace(".",",")+'</text>'});
+  var ME=["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov"],vist={};
+  D.forEach(function(d,i){var m=+d[0].slice(0,2);if(!vist[m]){vist[m]=1;h+='<text x="'+X(i)+'" y="'+(H-6)+'">'+ME[m-1]+'</text>'}});
+  h+='<path class="lin" d="M'+D.map(function(d,i){return X(i).toFixed(1)+" "+Y(d[1]).toFixed(1)}).join("L")+'"/>';
+  function marca(dt,tx2,dx,dy,anc){var i=D.findIndex(function(d){return d[0]===dt});h+='<rect x="'+(X(i)-5)+'" y="'+(Y(D[i][1])-5)+'" width="10" height="10" fill="#C0EE4E" stroke="#101013" stroke-width="2"/><text x="'+(X(i)+dx)+'" y="'+(Y(D[i][1])+dy)+'" text-anchor="'+(anc||"start")+'" style="font-weight:700">'+tx2+'</text>'}
+  marca("03-31","março, preço fechado: R$ 5,22",-6,-34,"start");
+  marca("05-11","11/05: mínima, R$ 4,90",14,18);
+  marca("10-22","22/10: R$ 5,04",-10,50,"end");
+  marca("11-05","R$ 5,46",12,4);
+  h+='<line id="mira" x1="0" x2="0" y1="'+mT+'" y2="'+(H-mB)+'" stroke="#F2F1E9" stroke-opacity=".5" style="display:none"/><rect id="zona" x="'+mL+'" y="'+mT+'" width="'+(W-mL-mR)+'" height="'+(H-mT-mB)+'" fill="transparent"/>';
+  svg.innerHTML=h;
+  var dica=$("#dicaDolar"),mira=$("#mira");
+  if(PDF)return;
+  $("#zona").addEventListener("mousemove",function(e){
+    var r=svg.getBoundingClientRect(),px=(e.clientX-r.left)/r.width*W,i=Math.max(0,Math.min(D.length-1,Math.round((px-mL)/(W-mL-mR)*(D.length-1))));
+    mira.setAttribute("x1",X(i));mira.setAttribute("x2",X(i));mira.style.display="";
+    dica.style.display="block";dica.style.left=Math.min(X(i)+10,740)+"px";dica.style.top=(124+Y(D[i][1])-34)+"px";
+    dica.textContent=D[i][0].slice(3)+"/"+D[i][0].slice(0,2)+": R$ "+D[i][1].toFixed(2).replace(".",",");
+  });
+  $("#zona").addEventListener("mouseleave",function(){mira.style.display="none";dica.style.display="none"});
+})();
 
-/* recarrega quando sai versão nova */
-if(!PDF&&location.protocol.indexOf("http")===0){fetch("versao.txt?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.text():""}).then(function(v){v=v.trim();var a=$("#versaoDeck").content;if(v&&v!==a&&location.search.indexOf("v="+v)<0){location.replace(location.pathname+"?v="+v+location.hash)}}).catch(function(){})}
+/* simulador */
+var BASE=1193490.40,rg=$("#rg"),mexeu=false,tim=null;
+function pinta(){
+  var p=+rg.value;
+  $("#rsMais").textContent="+ R$ "+fmt(BASE*p/100);
+  $("#rsPct").textContent="com "+String(p).replace(".",",")+"%";
+  rg.style.background="linear-gradient(90deg,var(--azul) "+(p/15*100)+"%,var(--paper-2) "+(p/15*100)+"%)";
+}
+rg.addEventListener("input",function(){mexeu=true;clearInterval(tim);pinta()});
+function autoSim(){
+  if(mexeu)return;clearInterval(tim);rg.value=0;pinta();var v=0;
+  tim=setInterval(function(){v+=.5;rg.value=v;pinta();if(v>=10)clearInterval(tim)},70);
+}
+pinta();
+
+/* decisões */
+$$(".chk").forEach(function(b){b.onclick=function(){b.classList.toggle("ok")}});
+
+/* PDF */
+window.__pdfEstados=function(){return 0};
+window.__pdfEstado=function(){};
+
+/* versão nova: recarrega */
+if(!PDF&&location.protocol!=="file:"){fetch("versao.txt?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(v){v=v.trim();var a=$("#versaoDeck").content;if(v&&v!==a&&!/[?&]v=/.test(location.search)){location.replace(location.pathname+"?v="+v+location.hash)}}).catch(function(){})}
+
+ir((parseInt(location.hash.slice(1))||1)-1,true);
 })();
 </script>
 </body>
