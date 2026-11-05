@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<meta id="versaoDeck" content="5">
+<meta id="versaoDeck" content="6">
 <title>Alltak × 75 LAB · Primeiro fechar. Depois crescer.</title>
-<meta name="description" content="Catálogos Alltak: por que terminar o contrato ativo até fevereiro é o caminho mais barato para o contrato novo.">
+<meta name="description" content="Catálogos Alltak: por que terminar o lote atual até março é o caminho mais barato para o novo lote.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -94,21 +94,22 @@ h3{font-family:var(--titulo);font-weight:900;text-transform:uppercase;letter-spa
 .selo{font:700 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;background:var(--ink);color:var(--lime);padding:6px 10px;flex:none}
 
 /* 03 pedido */
-.pedido h2{position:absolute;left:96px;top:104px;width:1300px;font-size:76px}
+.pedido h2{position:absolute;left:96px;top:96px;width:1408px;font-size:76px}
 .pedido h2 span{color:var(--ink)}
-.eq{position:absolute;left:96px;right:96px;top:284px;display:grid;grid-template-columns:auto 60px auto 60px 1fr;align-items:start;gap:0 12px;border-top:2px solid rgba(255,255,255,.45);padding-top:18px}
-.eq .num{font-size:152px;line-height:.95;color:#fff}
-.eq .num.f{color:var(--ink)}
-.eq .op{font-family:var(--titulo);font-weight:700;font-size:70px;text-align:center;padding-top:18px}
-.eq small{display:block;font-size:18px;line-height:1.3;margin-top:8px;font-family:var(--corpo);font-weight:500;letter-spacing:0;text-transform:none;max-width:420px}
-.ideias-h{position:absolute;left:96px;right:96px;top:572px;display:flex;justify-content:space-between;align-items:center}
-.ideias{position:absolute;left:96px;right:96px;top:606px;display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
-.ideia{background:var(--ink);color:var(--paper);border:0;text-align:left;padding:18px 18px 16px;height:218px;display:flex;flex-direction:column;font-family:var(--corpo);transition:transform .2s,background .2s}
+.ideias-h{position:absolute;left:96px;right:96px;top:284px;display:flex;justify-content:space-between;align-items:center}
+.ideias{position:absolute;left:96px;right:96px;top:318px;height:486px;display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.ideia{background:var(--ink);color:var(--paper);border:0;text-align:left;padding:18px 18px 16px;display:flex;flex-direction:column;font-family:var(--corpo);transition:transform .2s,background .2s}
 .ideia:hover{transform:translate(-2px,-4px);background:var(--marinho)}
-.ideia span{font:700 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--lime)}
-.ideia b{font-family:var(--titulo);font-weight:900;font-size:31px;line-height:1.02;text-transform:uppercase;margin:10px 0 auto}
-.ideia em{font-style:normal;font-size:15px;line-height:1.3;display:flex;justify-content:space-between;gap:10px;align-items:flex-end;opacity:.92}
-.ideia em::after{content:'→';font-size:17px;color:var(--lime)}
+.ideia>span{font:700 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;opacity:.7}
+.ideia>b{font-family:var(--titulo);font-weight:900;font-size:31px;line-height:1.02;text-transform:uppercase;margin:7px 0 10px;min-height:64px}
+.ideia .vd{align-self:flex-start;font:700 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:5px 8px;background:var(--paper);color:var(--ink);margin-bottom:14px}
+.ideia .vd.sim{background:var(--lime)}
+.ideia dl{display:block;flex:1}
+.ideia dt{display:flex;align-items:center;gap:7px;font:700 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;border-top:2px solid var(--fio-c);padding-top:9px}
+.ideia dt i{font:700 16px/1 var(--corpo);font-style:normal;color:var(--lime);width:12px}
+.ideia dd{font-size:15.5px;line-height:1.3;margin:4px 0 11px;opacity:.94}
+.ideia .ver{font:700 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;display:flex;justify-content:space-between;color:var(--lime)}
+.ideia .ver::after{content:'→';font:400 16px/1 var(--corpo)}
 
 /* 04 momento */
 .momento h2{position:absolute;left:96px;top:100px;font-size:82px;width:1408px;white-space:nowrap}
@@ -221,13 +222,13 @@ h3{font-family:var(--titulo);font-weight:900;text-transform:uppercase;letter-spa
 
 /* 10 fim */
 .fim .esq{position:absolute;left:96px;top:112px;width:610px}
-.fim h2{font-size:126px;line-height:.98;margin:14px 0 18px}
+.fim h2{font-size:118px;line-height:1;margin:14px 0 22px}
 .fim .lead{font-size:20px;line-height:1.42;margin-bottom:22px}
-.entregas{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:3px solid var(--ink);margin-bottom:26px}
-.entregas div{padding:12px 12px 0 0;font-size:15px;line-height:1.28}
-.entregas div+div{padding-left:14px;border-left:2px solid var(--fio)}
-.entregas span{font:700 12px var(--mono);letter-spacing:.1em;text-transform:uppercase}
-.entregas b{display:block;font-family:var(--titulo);font-weight:900;font-size:54px;line-height:1.02}
+.entregas{display:grid;grid-template-columns:repeat(4,1fr);border-top:3px solid var(--ink);margin-bottom:26px}
+.entregas div{padding:14px 8px 0 0;font-size:15px;line-height:1.28}
+.entregas div+div{padding-left:12px;border-left:2px solid var(--fio)}
+.entregas span{font:700 11px var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.entregas b{display:block;font-family:var(--titulo);font-weight:900;font-size:46px;line-height:1.06}
 .fim .dirr{position:absolute;left:770px;right:96px;top:112px}
 .fim .chk-h{display:flex;justify-content:space-between;align-items:center;padding-bottom:12px}
 .chk{width:100%;display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start;text-align:left;background:none;border:0;border-top:2px solid rgba(5,5,5,.3);padding:15px 0;color:inherit;font-family:var(--corpo);transition:background .2s}
@@ -269,7 +270,7 @@ body.tem-mouse #cursor{display:block}
   <div class="tx">
     <span class="eb anima"><b>(Catálogos)</b> Cenário para 2027 · novembro de 2026</span>
     <h1 class="anima d1">Primeiro fechar. <span class="cl">Depois crescer.</span></h1>
-    <p class="lead anima d2">O contrato ativo já tem preço travado, capa impressa e fila de produção. Terminá-lo até fevereiro é o caminho mais curto e mais barato para os 90.000 catálogos que vocês querem.</p>
+    <p class="lead anima d2">O contrato ativo já tem preço travado, capa impressa e fila de produção. Terminá-lo até março é o caminho mais barato para chegar à entrega mensal que vocês querem, já em abril.</p>
     <div class="acoes anima d3"><button class="botao limao seta so-tela" data-ir="2">Ver o cenário</button><a class="botao so-tela" href="alltak-catalogos-2027.pdf" download>Baixar em PDF</a></div>
   </div>
   <div class="grao"></div>
@@ -308,19 +309,20 @@ body.tem-mouse #cursor{display:block}
 <section class="slide azul pedido" data-t="O pedido">
   <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(02)</b> O que vocês pediram</span></div>
   <h2 class="anima">A intenção é certa: previsibilidade.<br><span>O caminho é que sai caro.</span></h2>
-  <div class="eq anima d1">
-    <div class="num">61.736<small>que faltam do contrato ativo</small></div><div class="op">+</div>
-    <div class="num">28.264<small>a mais: 13.264 Decor e 15.000 Sign</small></div><div class="op">=</div>
-    <div class="num f">90.000<small>no contrato novo: 7.500 por mês, R$ 142 mil de parcela a preço de hoje</small></div>
+  <div class="ideias-h anima d1"><span class="eb" style="color:var(--ink)">Levamos cada ideia para a gráfica. A resposta:</span><span class="cta" style="color:var(--ink)"><svg><use href="#i-mao"/></svg>Clique para ver a conta de cada ideia</span></div>
+  <div class="ideias anima d2">
+    <button class="ideia" data-ir="5"><span>Ideia 1</span><b>Zerar e recomeçar em janeiro</b><em class="vd" style="font-style:normal">Não compensa</em>
+      <dl><dt><i>+</i>Vantagem</dt><dd>Um contrato só e parcela mensal fixa desde o começo.</dd><dt><i>−</i>Desvantagem</dt><dd>Reabre o preço do saldo com dissídio, dólar e imposto novos. Capas prontas ficam paradas e a primeira entrega regular continua em abril.</dd></dl><span class="ver cta">Ver a conta</span></button>
+    <button class="ideia" data-ir="6"><span>Ideia 2</span><b>2.500 por modelo já em janeiro</b><em class="vd" style="font-style:normal">Viável a partir de abril</em>
+      <dl><dt><i>+</i>Vantagem</dt><dd>Abastecimento sem janelas e custo previsível no financeiro. A gráfica confirma o ritmo.</dd><dt><i>−</i>Desvantagem</dt><dd>Janeiro não é possível: a bobina precisa de cerca de 3 meses até virar entrega. Pede remessa inicial para uns 10 mil catálogos.</dd></dl><span class="ver cta">Ver a conta</span></button>
+    <button class="ideia" data-ir="7"><span>Ideia 3</span><b>Todos no formato do Decor</b><em class="vd" style="font-style:normal">Sai mais caro</em>
+      <dl><dt><i>+</i>Vantagem</dt><dd>Um único expositor serve para todos os catálogos.</dd><dt><i>−</i>Desvantagem</dt><dd>Sign consome 2,3x mais bobina e Wraps 1,6x, e a bobina é da Alltak. Mais hora de máquina, e as capas prontas deixam de servir.</dd></dl><span class="ver cta">Ver a conta</span></button>
+    <button class="ideia" data-ir="8"><span>Ideia 4</span><b>Manuseio dentro do grupo Alko</b><em class="vd" style="font-style:normal">Caminho sem volta</em>
+      <dl><dt><i>+</i>Vantagem</dt><dd>Aproveita a mão de obra que o grupo já tem. O ganho ainda depende do custo por etapa.</dd><dt><i>−</i>Desvantagem</dt><dd>A impressão é planejada para o acabamento. Intercalar uma a uma perde produtividade, e voltar para a linha custa mais que a economia.</dd></dl><span class="ver cta">Ver a conta</span></button>
+    <button class="ideia" data-ir="10"><span>Ideia 5</span><b>Usar rolos que sobram</b><em class="vd sim" style="font-style:normal">Aprovado</em>
+      <dl><dt><i>+</i>Vantagem</dt><dd>Escoa rolos com falha de produção, que não iriam para a venda, e ainda vira catálogo.</dd><dt><i>−</i>Desvantagem</dt><dd>Nenhuma, com duas regras: todos na mesma largura e com os metros quadrados na etiqueta de cada rolo.</dd></dl><span class="ver cta">Ver as decisões</span></button>
   </div>
-  <div class="ideias-h anima d2"><span class="eb" style="color:var(--ink)">Levamos cada ideia para a gráfica. A resposta:</span><span class="cta" style="color:var(--ink)"><svg><use href="#i-mao"/></svg>Clique em cada ideia</span></div>
-  <div class="ideias anima d3">
-    <button class="ideia" data-ir="5"><span>Ideia 1</span><b>Zerar e recomeçar em janeiro</b><em>Reabre o preço de todo o saldo</em></button>
-    <button class="ideia" data-ir="6"><span>Ideia 2</span><b>2.500 por modelo já em janeiro</b><em>Só depois da bobina em estoque</em></button>
-    <button class="ideia" data-ir="7"><span>Ideia 3</span><b>Todos no formato do Decor</b><em>A Alltak gasta mais bobina</em></button>
-    <button class="ideia" data-ir="8"><span>Ideia 4</span><b>Manuseio dentro do grupo Alko</b><em>Caminho sem volta</em></button>
-    <button class="ideia" data-ir="10"><span>Ideia 5</span><b>Usar rolos que sobram</b><em>Aprovado, com duas regras</em></button>
-  </div>
+  <p class="fonte" style="color:var(--ink)">Fonte: gráfica, reunião de 28/10/2026; arquivos de produção dos catálogos 2026.</p>
   <div class="grao"></div>
   <aside hidden>Vocês querem uma parcela fixa e entrega sem surpresa, e isso faz sentido. Testamos cada ideia na máquina.</aside>
 </section>
@@ -328,14 +330,14 @@ body.tem-mouse #cursor{display:block}
 <!-- 04 momento -->
 <section class="slide escuro momento" data-t="O momento">
   <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-paper.png" alt="75 LAB"></div><span class="eb"><b>(03)</b> O momento</span></div>
-  <h2 class="anima">Janeiro é o pior mês <span class="cl">para reabrir preço.</span></h2>
+  <h2 class="anima">Este é o pior momento <span class="cl">para reabrir o saldo.</span></h2>
   <div class="grafico anima d1">
     <div class="heroi"><div class="num">+8,4%</div><p><b>Dólar em duas semanas</b>, de R$ 5,04 para R$ 5,46. Parafusos e insumos importados acompanham.</p></div>
     <svg id="svgDolar" viewBox="0 0 870 450"></svg><div id="dicaDolar"></div>
   </div>
   <ul class="fatores anima d2">
     <li><span>Dissídio · mão de obra</span><b>+10%</b><p>Em vigor na gráfica desde setembro. Não foi repassado ao contrato ativo, e mão de obra é o que mais pesa no catálogo.</p></li>
-    <li><span>Imposto · CBS em 2027</span><b>11,3%</b><p>Referência calculada pelo TCU. PIS e Cofins saem em 1º de janeiro e o Senado só fixa a alíquota até 15/12: orçar 12 meses agora é orçar no escuro.</p></li>
+    <li><span>Imposto · CBS em 2027</span><b>11,3%</b><p>Referência calculada pelo TCU. PIS e Cofins saem em 1º de janeiro e o Senado só fixa a alíquota até 15/12. Por isso o novo lote se negocia depois dessa data.</p></li>
     <li><span>Juros · Selic</span><b>13,75%</b><p>Dinheiro caro para quem carrega estoque, e janeiro ainda abre com mandato novo em Brasília.</p></li>
   </ul>
   <p class="fonte">Fontes: Banco Central, PTAX venda, 02/01 a 05/11/2026, e meta Selic; TCU, 28/10/2026; LC 214/2025; gráfica, reunião de 28/10/2026 (dissídio). Inflação: IPCA de 4,58% em 12 meses até setembro.</p>
@@ -391,11 +393,11 @@ body.tem-mouse #cursor{display:block}
   <div class="cond anima d3">
     <div><b>Lote antes de ritmo</b><p>A gráfica imprime todo o lote de um modelo e só depois monta. Decor em uma máquina, Sign e Wraps em outra.</p></div>
     <div><b>10.000 na primeira remessa</b><p>Com rolo para cerca de 10 mil catálogos a produção gira. Com rolo para 2.500, a janela fica grande demais.</p></div>
-    <div><b>Vale para o contrato novo</b><p>Com o saldo fechado e estoque de bobina na gráfica, a recorrência que vocês pediram entra sem esse vazio.</p></div>
+    <div><b>Abril vale para o novo lote</b><p>Janeiro a março viram o setup do novo lote. Em abril a recorrência que vocês pediram começa, com o lote atual já entregue.</p></div>
   </div>
   <p class="fonte">Fonte: gráfica, reunião de 28/10/2026. Prazo estimado a partir da chegada da bobina.</p>
   <div class="grao"></div>
-  <aside hidden>A recorrência é viável, a gráfica confirmou. O que muda é o começo: existe um tempo de máquina entre a bobina e o primeiro lote mensal.</aside>
+  <aside hidden>A recorrência é viável, a gráfica confirmou. Zerando ou não, a entrega regular começa em abril. A diferença é que, sem zerar, o lote atual chega no preço de hoje.</aside>
 </section>
 
 <!-- 07 formatos -->
@@ -465,34 +467,35 @@ body.tem-mouse #cursor{display:block}
       <dl><dt>Preço</dt><dd>Saldo travado</dd><dt>Ritmo</dt><dd>Só depois do novo planejamento</dd><dt>O que pesa</dt><dd><strong>Meses sem contrato</strong> depois de março</dd></dl>
     </div>
     <div class="ln rec">
-      <div class="rot"><span>Caminho C · recomendado</span><b>Fechar até fevereiro</b></div>
-      <div class="tr"><div class="sg lm t1" style="left:0;width:44.44%">61.736 no preço de hoje</div><div class="sg nv t1" style="left:44.44%;width:55.56%;background:var(--azul)">Contrato novo: 7.500 por mês</div><div class="sg pr t2" style="left:0;width:44.44%">Desenhar o contrato novo em paralelo</div><div class="sg nv t2" style="left:44.44%;width:55.56%;background:var(--azul)">12 meses, preço novo, formatos revistos</div></div>
-      <dl><dt>Preço</dt><dd>Saldo travado, novo só no volume novo</dd><dt>Ritmo</dt><dd>Março de 2027</dd><dt>O que pesa</dt><dd><strong>Bobina e pagamento</strong> concentrados até fevereiro</dd></dl>
+      <div class="rot"><span>Caminho C · recomendado</span><b>Fechar até março, novo lote em abril</b></div>
+      <div class="tr"><div class="sg lm t1" style="left:0;width:55.55%">Lote atual: 61.736 no preço de hoje</div><div class="sg nv t1" style="left:55.55%;width:44.45%;background:var(--azul)">Novo lote: 7.500 por mês</div><div class="sg pr t2" style="left:11.11%;width:11.11%;padding:4px 6px;font-size:13px">Negociar</div><div class="sg pr t2" style="left:22.22%;width:33.33%">Setup do novo lote</div><div class="sg nv t2" style="left:55.55%;width:44.45%;background:var(--azul)">Entrega regular</div></div>
+      <dl><dt>Preço</dt><dd>Lote atual travado, preço novo só no novo lote</dd><dt>Ritmo</dt><dd>Abril de 2027</dd><dt>O que pesa</dt><dd><strong>Lote atual e setup</strong> correm juntos até março</dd></dl>
     </div>
   </div>
   <p class="fonte">Fontes: proposta da Alltak; gráfica, reunião de 28/10/2026; simulação da tela 5. Caminho A considera bobina em janeiro. Prazos dependem da chegada das bobinas.</p>
   <div class="grao"></div>
-  <aside hidden>O caminho C leva um mês a mais que o calendário original e chega ao ritmo mensal antes do pedido original. O custo é concentrar bobina e pagamento até fevereiro.</aside>
+  <aside hidden>No caminho C o lote atual termina em março, o novo lote se negocia em dezembro, janeiro a março são de setup e a entrega regular começa em abril. É a mesma data do pedido de vocês, com o saldo no preço de hoje.</aside>
 </section>
 
 <!-- 10 fim -->
 <section class="slide lime fim" data-t="Decisões">
   <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(09)</b> Próximo passo</span></div>
   <div class="esq">
-    <h2 class="anima">Fechamos até fevereiro?</h2>
-    <p class="lead anima d1">Damos um mês a mais que o calendário original para terminar sem pressa. Em março, o contrato novo começa com o ritmo que vocês pediram.</p>
+    <h2 class="anima">Fechamos até março?</h2>
+    <p class="lead anima d1">O lote atual ganha dois meses além do calendário original. Em dezembro negociamos o novo lote, de janeiro a março fazemos o setup e, em abril, começa a entrega regular que vocês pediram.</p>
     <div class="entregas anima d2">
       <div><span>Dezembro</span><b>1.736</b>Decor, fecha o lote aberto</div>
-      <div><span>Janeiro</span><b>30.000</b>15 mil Decor e 15 mil Sign</div>
-      <div><span>Fevereiro</span><b>30.000</b>Wraps, contrato concluído</div>
+      <div><span>Até fevereiro</span><b>30.000</b>15 mil Decor e 15 mil Sign</div>
+      <div><span>Até março</span><b>30.000</b>Wraps, lote atual concluído</div>
+      <div><span>Abril</span><b>7.500</b>por mês, novo lote</div>
     </div>
   </div>
   <div class="dirr">
     <div class="chk-h anima"><span class="eb">Quatro decisões</span><span class="cta"><svg><use href="#i-mao"/></svg>Clique para marcar</span></div>
     <button class="chk anima d1"><i><svg><use href="#i-ok"/></svg></i><div><small>Novembro · Alltak</small><b>Cronograma de bobinas</b><span>Primeira remessa para 10 mil catálogos. Rolos que sobram entram, com a mesma largura e m² na etiqueta.</span></div></button>
     <button class="chk anima d1"><i><svg><use href="#i-ok"/></svg></i><div><small>Novembro · Alltak e 75 LAB</small><b>Faturar o que está pronto</b><span>Capas impressas e lote do Decor seguem para faturamento, sem esperar a última lâmina.</span></div></button>
-    <button class="chk anima d2"><i><svg><use href="#i-ok"/></svg></i><div><small>Dezembro · Alltak e 75 LAB</small><b>Aditivo até fevereiro</b><span>Mesmo escopo, mesmo preço, um mês a mais.</span></div></button>
-    <button class="chk anima d2"><i><svg><use href="#i-ok"/></svg></i><div><small>Até fevereiro · 75 LAB</small><b>Contrato novo pronto</b><span>12 meses com revisão anual, 7.500 por mês, formatos e expositor resolvidos, custo por etapa aberto.</span></div></button>
+    <button class="chk anima d2"><i><svg><use href="#i-ok"/></svg></i><div><small>Dezembro · Alltak e 75 LAB</small><b>Aditivo até março</b><span>Lote atual com mesmo escopo e mesmo preço, dois meses além do calendário.</span></div></button>
+    <button class="chk anima d2"><i><svg><use href="#i-ok"/></svg></i><div><small>Dezembro · Alltak e 75 LAB</small><b>Novo lote negociado</b><span>Com a alíquota já fixada: 12 meses, revisão anual, 7.500 por mês, formatos e expositor resolvidos. Setup de janeiro a março.</span></div></button>
     <a class="botao cheio seta so-tela anima d3" style="margin-top:18px" href="https://wa.me/5511986765634?text=Ol%C3%A1%2C%20vi%20o%20cen%C3%A1rio%20dos%20cat%C3%A1logos%20Alltak" target="_blank" rel="noopener">Fechar pelo WhatsApp</a>
   </div>
   <div class="assin anima d3">

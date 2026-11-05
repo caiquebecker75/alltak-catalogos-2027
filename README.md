@@ -1,6 +1,6 @@
 # Alltak × 75 LAB · Primeiro fechar. Depois crescer.
 
-Cenário dos catálogos: onde estamos, o que a Alltak pediu, o momento (dissídio, dólar, imposto e juros), a conta de cada ideia e os três caminhos. Recomendação: fechar o contrato ativo até fevereiro e começar o contrato novo em março.
+Cenário dos catálogos: onde estamos, o que a Alltak pediu, o momento (dissídio, dólar, imposto e juros), a conta de cada ideia e os três caminhos. Recomendação: fechar o lote atual até março, negociar o novo lote em dezembro, setup de janeiro a março e entrega regular a partir de abril.
 
 Link: https://projetos.75lab.com.br/alltak-catalogos-2027/
 
