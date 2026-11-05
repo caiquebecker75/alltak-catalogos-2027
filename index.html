@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<meta id="versaoDeck" content="3">
+<meta id="versaoDeck" content="4">
 <title>Alltak × 75 LAB · Catálogos 2027</title>
 <meta name="description" content="Cenário dos catálogos Alltak: o acordado, o realizado, o pedido e três caminhos para 2027.">
 <link rel="icon" href="assets/caveira-simbolo.png">
@@ -184,9 +184,10 @@ h2{font-size:54px;line-height:1.04;margin-top:10px}
 .pdf .tudo{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;height:100%}
 .pdf .tudo div:last-child{grid-column:span 2}
 .tudo div{background:var(--cream);color:var(--dk);padding:24px 24px;display:flex;flex-direction:column}
-.tudo h3{font-size:27px;line-height:1.12;margin-top:16px}
-.tudo p{font-size:18px;line-height:1.32;margin-top:auto;padding-top:12px;color:var(--dk2)}
+.tudo h3{font-size:24px;line-height:1.12;margin-top:12px}
+.tudo p{font-size:16.5px;line-height:1.3;margin-top:auto;padding-top:12px;color:var(--dk2)}
 .tudo .selo{font-size:12.5px;padding:6px 14px}
+.tudo .q{font-style:normal;font-size:15px;font-weight:700;line-height:1.2;color:var(--blue-deep);margin-bottom:10px;min-height:37px}
 
 /* 07 caminhos: linha do tempo que muda */
 .cam-abas{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:20px}
@@ -530,7 +531,7 @@ var G=[
 ];
 var gSel=0;
 $("#perg").innerHTML=G.map(function(g,k){return '<button data-g="'+k+'"><span>'+g.p+'</span>'+ico("i-seta")+'<i></i></button>'}).join("");
-$("#tudo").innerHTML=G.map(function(g){return '<div><span class="selo '+g.s+'">'+g.l+'</span><h3>'+g.h+'</h3><p>'+g.e+'</p></div>'}).join("");
+$("#tudo").innerHTML=G.map(function(g){return '<div><em class="q">'+g.p+'</em><span class="selo '+g.s+'">'+g.l+'</span><h3>'+g.h+'</h3><p>'+g.e+'</p></div>'}).join("");
 function rG(){
   var g=G[gSel];
   $$("#perg button").forEach(function(b,k){b.classList.toggle("sel",k===gSel)});
