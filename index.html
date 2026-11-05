@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<meta id="versaoDeck" content="7">
+<meta id="versaoDeck" content="8">
 <title>Alltak × 75 LAB · Primeiro fechar. Depois crescer.</title>
 <meta name="description" content="Catálogos Alltak: por que terminar o lote atual até março é o caminho mais barato para o novo lote.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -111,6 +111,22 @@ h3{font-family:var(--titulo);font-weight:900;text-transform:uppercase;letter-spa
 .ideia .ver{font:700 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;display:flex;justify-content:space-between;color:var(--lime)}
 .ideia .ver::after{content:'→';font:400 16px/1 var(--corpo)}
 
+/* 04 dúvidas */
+.duvidas h2{position:absolute;left:96px;top:100px;font-size:76px;width:1408px}
+.dv{position:absolute;left:96px;right:96px;top:236px}
+.dv .cab,.dv .lin{display:grid;grid-template-columns:400px 300px 1fr 1fr;gap:0 28px}
+.dv .cab{font:700 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;padding-bottom:10px}
+.dv .cab span:nth-child(3),.dv .lin .fav b{color:var(--azul)}
+.dv .lin{border-top:2px solid var(--fio);padding:20px 0 18px;align-items:start;min-height:136px}
+.dv .lin:last-child{border-bottom:2px solid var(--fio)}
+.dv .q{font-family:var(--titulo);font-weight:900;font-size:31px;line-height:1.04;text-transform:uppercase}
+.dv .q small{display:block;font:700 11px var(--mono);letter-spacing:.1em;opacity:.55;margin-bottom:6px}
+.dv .r b{display:block;font-family:var(--titulo);font-weight:900;font-size:34px;line-height:1.02;text-transform:uppercase;color:var(--azul)}
+.dv .r span{display:block;font-size:15px;line-height:1.3;margin-top:4px}
+.dv .fav,.dv .at{font-size:17px;line-height:1.38}
+.dv .fav b,.dv .at b{display:flex;align-items:center;gap:7px;font:700 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.dv .fav b i,.dv .at b i{font:700 16px/1 var(--corpo);font-style:normal}
+
 /* 04 momento */
 .momento h2{position:absolute;left:96px;top:100px;font-size:82px;width:1408px;white-space:nowrap}
 .grafico{position:absolute;left:96px;top:214px;width:870px;height:574px}
@@ -131,24 +147,30 @@ h3{font-family:var(--titulo);font-weight:900;text-transform:uppercase;letter-spa
 
 /* 05 simulador */
 .simula h2{position:absolute;left:96px;top:104px;font-size:82px;width:1300px}
-.trav{position:absolute;left:96px;top:318px;width:560px;height:446px;background:var(--ink);color:var(--paper);padding:32px 36px}
-.trav .num{font-size:92px;color:var(--lime);margin:12px 0 18px;line-height:1}
+.trav{position:absolute;left:96px;top:292px;width:560px;height:384px;background:var(--ink);color:var(--paper);padding:26px 36px}
+.trav .num{font-size:84px;color:var(--lime);margin:10px 0 14px;line-height:1}
 .trav ul{list-style:none;border-top:2px solid var(--fio-c)}
-.trav li{display:grid;grid-template-columns:22px 1fr;gap:10px;font-size:18px;line-height:1.35;padding:14px 0;border-bottom:2px solid var(--fio-c)}
+.trav li{display:grid;grid-template-columns:22px 1fr;gap:10px;font-size:17px;line-height:1.35;padding:10px 0;border-bottom:2px solid var(--fio-c)}
 .trav li svg{width:18px;height:18px;margin-top:3px;color:var(--lime)}
-.aberto{position:absolute;left:656px;right:96px;top:318px;height:446px;border:2px solid var(--ink);border-left:0;padding:32px 40px;background:#fff}
+.aberto{position:absolute;left:656px;right:96px;top:292px;height:384px;border:2px solid var(--ink);border-left:0;padding:26px 40px;background:#fff}
 .aberto .cab{display:flex;justify-content:space-between;align-items:center}
-.aberto .res{display:flex;align-items:baseline;gap:18px;margin:12px 0 2px}
-.aberto .res .num{font-size:92px;color:var(--azul);line-height:1}
+.aberto .res{display:flex;align-items:baseline;gap:18px;margin:8px 0 2px}
+.aberto .res .num{font-size:84px;color:var(--azul);line-height:1}
 .aberto .res span{font-family:var(--titulo);font-weight:900;font-size:40px;text-transform:uppercase}
 .aberto p.exp{font-size:17px;line-height:1.35}
-#rg{-webkit-appearance:none;appearance:none;width:100%;height:10px;background:var(--paper-2);margin:32px 0 8px;display:block;outline:none}
+#rg{-webkit-appearance:none;appearance:none;width:100%;height:10px;background:var(--paper-2);margin:24px 0 8px;display:block;outline:none}
 #rg::-webkit-slider-thumb{-webkit-appearance:none;width:30px;height:30px;background:var(--ink);border:4px solid var(--lime);box-shadow:0 0 0 2px var(--ink)}
 .marcos{position:relative;height:40px;font:400 12px/1.25 var(--mono)}
 .marcos span{position:absolute;top:0;transform:translateX(-50%);text-align:center;white-space:nowrap}
 .marcos span::before{content:'';display:block;width:2px;height:7px;background:var(--ink);margin:0 auto 3px}
-.cen{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--fio);margin-top:22px}
-.cen div{padding:14px 0 0;font-size:15px;line-height:1.3}
+.cen{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--fio);margin-top:14px}
+.cen div{padding:10px 0 0;font-size:15px;line-height:1.3}
+.formato-x{position:absolute;left:96px;right:96px;top:692px;height:100px;background:var(--azul);color:#fff;display:grid;grid-template-columns:auto 1fr auto;gap:34px;align-items:center;padding:0 36px}
+.formato-x .eb{color:#fff;opacity:.85;display:block;margin-bottom:4px}
+.formato-x b{font-family:var(--titulo);font-weight:900;font-size:54px;line-height:1}
+.formato-x p{font-size:17px;line-height:1.35}
+.formato-x .tot{text-align:right}
+.formato-x .tot b{color:var(--ink)}
 .cen b{display:block;font-family:var(--titulo);font-weight:900;font-size:36px;line-height:1.1}
 
 /* 06 prazo */
@@ -311,15 +333,15 @@ body.tem-mouse #cursor{display:block}
   <h2 class="anima">A intenção é certa: previsibilidade.<br><span>O caminho é que sai caro.</span></h2>
   <div class="ideias-h anima d1"><span class="eb" style="color:var(--ink)">Levamos cada ideia para a gráfica. A resposta:</span><span class="cta" style="color:var(--ink)"><svg><use href="#i-mao"/></svg>Clique para ver a conta de cada ideia</span></div>
   <div class="ideias anima d2">
-    <button class="ideia" data-ir="5"><span>Ideia 1</span><b>Zerar e recomeçar em janeiro</b><em class="vd" style="font-style:normal">Não compensa</em>
+    <button class="ideia" data-ir="6"><span>Ideia 1</span><b>Zerar e recomeçar em janeiro</b><em class="vd" style="font-style:normal">Não compensa</em>
       <dl><dt><i>+</i>Vantagem</dt><dd>Um contrato só e parcela mensal fixa desde o começo.</dd><dt><i>−</i>Desvantagem</dt><dd>Reabre o preço do saldo com dissídio, dólar e imposto novos. Capas prontas ficam paradas e a primeira entrega regular continua em abril.</dd></dl><span class="ver cta">Ver a conta</span></button>
-    <button class="ideia" data-ir="6"><span>Ideia 2</span><b>2.500 por modelo já em janeiro</b><em class="vd" style="font-style:normal">Viável a partir de abril</em>
+    <button class="ideia" data-ir="7"><span>Ideia 2</span><b>2.500 por modelo já em janeiro</b><em class="vd" style="font-style:normal">Viável a partir de abril</em>
       <dl><dt><i>+</i>Vantagem</dt><dd>Abastecimento sem janelas e custo previsível no financeiro. A gráfica confirma o ritmo.</dd><dt><i>−</i>Desvantagem</dt><dd>Janeiro não é possível: a bobina precisa de cerca de 3 meses até virar entrega. Pede remessa inicial para uns 10 mil catálogos.</dd></dl><span class="ver cta">Ver a conta</span></button>
-    <button class="ideia" data-ir="7"><span>Ideia 3</span><b>Todos no formato do Decor</b><em class="vd" style="font-style:normal">Sai mais caro</em>
-      <dl><dt><i>+</i>Vantagem</dt><dd>Um único expositor serve para todos os catálogos.</dd><dt><i>−</i>Desvantagem</dt><dd>Sign consome 2,3x mais bobina e Wraps 1,6x, e a bobina é da Alltak. Mais hora de máquina, e as capas prontas deixam de servir.</dd></dl><span class="ver cta">Ver a conta</span></button>
-    <button class="ideia" data-ir="8"><span>Ideia 4</span><b>Manuseio dentro do grupo Alko</b><em class="vd" style="font-style:normal">Caminho sem volta</em>
+    <button class="ideia" data-ir="8"><span>Ideia 3</span><b>Todos no formato do Decor</b><em class="vd" style="font-style:normal">Sai mais caro</em>
+      <dl><dt><i>+</i>Vantagem</dt><dd>Um único expositor serve para todos os catálogos.</dd><dt><i>−</i>Desvantagem</dt><dd>Sign consome 2,3x mais bobina e Wraps 1,6x, e a bobina é da Alltak. E R$ 331 mil de capas prontas deixam de servir.</dd></dl><span class="ver cta">Ver a conta</span></button>
+    <button class="ideia" data-ir="9"><span>Ideia 4</span><b>Manuseio dentro do grupo Alko</b><em class="vd" style="font-style:normal">Caminho sem volta</em>
       <dl><dt><i>+</i>Vantagem</dt><dd>Aproveita a mão de obra que o grupo já tem. O ganho ainda depende do custo por etapa.</dd><dt><i>−</i>Desvantagem</dt><dd>A impressão é planejada para o acabamento. Intercalar uma a uma perde produtividade, e voltar para a linha custa mais que a economia.</dd></dl><span class="ver cta">Ver a conta</span></button>
-    <button class="ideia" data-ir="10"><span>Ideia 5</span><b>Usar rolos que sobram</b><em class="vd sim" style="font-style:normal">Aprovado</em>
+    <button class="ideia" data-ir="11"><span>Ideia 5</span><b>Usar rolos que sobram</b><em class="vd sim" style="font-style:normal">Aprovado</em>
       <dl><dt><i>+</i>Vantagem</dt><dd>Escoa rolos com falha de produção, que não iriam para a venda, e ainda vira catálogo.</dd><dt><i>−</i>Desvantagem</dt><dd>Nenhuma, com duas regras: todos na mesma largura e com os metros quadrados na etiqueta de cada rolo.</dd></dl><span class="ver cta">Ver as decisões</span></button>
   </div>
   <p class="fonte" style="color:var(--ink)">Fonte: gráfica, reunião de 28/10/2026; arquivos de produção dos catálogos 2026.</p>
@@ -327,9 +349,25 @@ body.tem-mouse #cursor{display:block}
   <aside hidden>Vocês querem uma parcela fixa e entrega sem surpresa, e isso faz sentido. Testamos cada ideia na máquina.</aside>
 </section>
 
+<!-- 04 dúvidas -->
+<section class="slide claro duvidas" data-t="As dúvidas">
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(03)</b> As dúvidas</span></div>
+  <h2 class="anima">E as dúvidas? <span class="ap">A gráfica respondeu</span> <span class="ca">uma a uma.</span></h2>
+  <div class="dv anima d1">
+    <div class="cab"><span>Pergunta</span><span>Resposta</span><span>A favor</span><span>Atenção</span></div>
+    <div class="lin"><div class="q"><small>Dúvida 1</small>A mesma máquina faz todos os catálogos?</div><div class="r"><b>Não: são duas</b><span>Decor em uma; Sign e Wraps em outra.</span></div><div class="fav">O Decor anda em paralelo com os outros dois modelos.</div><div class="at">Sign e Wraps dividem a mesma máquina: um lote espera o outro terminar de imprimir.</div></div>
+    <div class="lin"><div class="q"><small>Dúvida 2</small>Qual é o processo de produção?</div><div class="r"><b>Lote inteiro, depois manuseio</b><span>Imprime, intercala em bases de 4, refila, monta e embala.</span></div><div class="fav">Linha contínua: menos perda, menos ajuste de máquina e acabamento mais rápido.</div><div class="at">Precisa da bobina do lote antes de começar. Rolo que chega aos poucos trava a linha.</div></div>
+    <div class="lin"><div class="q"><small>Dúvida 3</small>Tem espaço para todo o volume de bobinas?</div><div class="r"><b>Sim</b><span>Galpão novo, perto da gráfica.</span></div><div class="fav">Time dedicado de 3 a 4 pessoas e impressora nova de cama plana para os materiais da Alltak.</div><div class="at">Nenhuma. O que pesa é material pronto parado, que ocupa espaço e se desgasta.</div></div>
+    <div class="lin"><div class="q"><small>Dúvida 4</small>Quantos catálogos saem por bobina, já com descarte?</div><div class="r"><b>A conta é por m²</b><span>Notas de bobina contra o volume produzido.</span></div><div class="fav">O histórico já responde: o Sign fechou sem perda e as lâminas do Decor recebidas cobrem 15 mil catálogos.</div><div class="at">Wraps só tem número quando a primeira bobina rodar. Cada rolo precisa vir com os m² na etiqueta.</div></div>
+  </div>
+  <p class="fonte">Fonte: gráfica, reunião de 28/10/2026.</p>
+  <div class="grao"></div>
+  <aside hidden>Além das ideias, levamos as dúvidas de vocês. Máquina, processo, espaço e rendimento da bobina: nenhuma resposta impede o plano, e duas pedem bobina organizada.</aside>
+</section>
+
 <!-- 04 momento -->
 <section class="slide escuro momento" data-t="O momento">
-  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-paper.png" alt="75 LAB"></div><span class="eb"><b>(03)</b> O momento</span></div>
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-paper.png" alt="75 LAB"></div><span class="eb"><b>(04)</b> O momento</span></div>
   <h2 class="anima">Este é o pior momento <span class="cl">para reabrir o saldo.</span></h2>
   <div class="grafico anima d1">
     <div class="heroi"><div class="num">+8,4%</div><p><b>Dólar em duas semanas</b>, de R$ 5,04 para R$ 5,46. Parafusos e insumos importados acompanham.</p></div>
@@ -347,7 +385,7 @@ body.tem-mouse #cursor{display:block}
 
 <!-- 05 simulador -->
 <section class="slide claro simula" data-t="Zerar custa quanto">
-  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(04)</b> Ideia 1 · Zerar o contrato</span></div>
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(05)</b> Ideia 1 · Zerar o contrato</span></div>
   <h2 class="anima">Zerar troca um preço <span class="ca">travado</span> <span class="ap">por um preço em aberto.</span></h2>
   <div class="trav anima d1">
     <span class="eb"><b>Contrato ativo</b> · 61.736 catálogos</span>
@@ -361,24 +399,25 @@ body.tem-mouse #cursor{display:block}
   </div>
   <div class="aberto anima d2">
     <div class="cab"><span class="eb"><b>Se o saldo for reorçado</b></span><span class="cta"><svg><use href="#i-mao"/></svg>Arraste para simular</span></div>
-    <div class="res"><div class="num" id="rsMais">+ R$ 119.349</div><span id="rsPct">com 10%</span></div>
-    <p class="exp">a mais pelos mesmos catálogos, antes dos 28.264 novos.</p>
-    <input id="rg" type="range" min="0" max="15" step="0.5" value="10" aria-label="Reajuste simulado em porcentagem">
-    <div class="marcos"><span style="left:0;transform:none">0%</span><span style="left:30.5%">IPCA<br>4,58%</span><span style="left:66.7%">Dissídio<br>10%</span><span style="left:100%;transform:translateX(-100%)">15%</span></div>
+    <div class="res"><div class="num" id="rsMais">+ R$ 229.150</div><span id="rsPct">com 19,2%</span></div>
+    <p class="exp">a mais pelos mesmos 61.736 catálogos, antes dos novos.</p>
+    <input id="rg" type="range" min="0" max="25" step="0.1" value="19.2" aria-label="Reajuste simulado em porcentagem">
+    <div class="marcos"><span style="left:0;transform:none">0%</span><span style="left:18.3%">IPCA<br>4,58%</span><span style="left:40%">Dissídio<br>10%</span><span style="left:76.8%">Dissídio e dólar<br>19,2%</span><span style="left:100%;transform:translateX(-100%)">25%</span></div>
     <div class="cen">
-      <div><b>+ R$ 54.662</b>se subir só a inflação</div>
-      <div><b>+ R$ 119.349</b>se subir como o dissídio</div>
-      <div><b>+ R$ 179.024</b>se somar dólar e imposto</div>
+      <div><b>+ R$ 54.662</b>só a inflação, 4,58%</div>
+      <div><b>+ R$ 119.349</b>dissídio da mão de obra, 10%</div>
+      <div><b>+ R$ 229.150</b>dissídio e dólar juntos, 19,2%</div>
     </div>
   </div>
-  <p class="fonte">Simulação sobre o valor do saldo a preço de hoje. O reajuste real depende do orçamento da gráfica, ainda não feito.</p>
+  <div class="formato-x anima d3"><div><span class="eb">E se o formato mudar</span><b>+ R$ 331.000</b></div><p>de capas e material já produzidos para o saldo. Com outro formato eles não servem, e a conta precisa ser paga do mesmo jeito.</p><div class="tot"><span class="eb">Zerar e mudar o formato</span><b id="rsTot">+ R$ 560.150</b></div></div>
+  <p class="fonte">Simulação sobre o valor do saldo a preço de hoje. Dissídio e dólar juntos: 10% de mão de obra e 8,4% de dólar aplicados em sequência. O reajuste real depende do orçamento da gráfica, ainda não feito.</p>
   <div class="grao"></div>
   <aside hidden>Do lado esquerdo, o que já está garantido. Do lado direito, o que passa a estar em aberto. Arraste e veja o tamanho da conta.</aside>
 </section>
 
 <!-- 06 prazo -->
 <section class="slide marinho prazo" data-t="2.500 por mês">
-  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-paper.png" alt="75 LAB"></div><span class="eb"><b>(05)</b> Ideia 2 · 2.500 por mês</span></div>
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-paper.png" alt="75 LAB"></div><span class="eb"><b>(06)</b> Ideia 2 · 2.500 por mês</span></div>
   <div class="esq">
     <h2 class="anima">Zerar em janeiro não adianta <span class="cl">nenhuma entrega.</span></h2>
     <div class="mes anima d1">Abril</div>
@@ -402,7 +441,7 @@ body.tem-mouse #cursor{display:block}
 
 <!-- 07 formatos -->
 <section class="slide claro formato" data-t="Formatos">
-  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(06)</b> Ideia 3 · Formato único</span></div>
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(07)</b> Ideia 3 · Formato único</span></div>
   <h2 class="anima">Mudar 90.000 catálogos <span class="ap">para caber em um expositor?</span> <span class="ca">A conta inverte.</span></h2>
   <div class="lams anima d1">
     <div class="lam"><div class="slot" style="border-color:transparent"><img src="assets/lam-decor.jpg" alt="Lâmina real do catálogo Decor" style="width:310px;height:191px"></div><h3>Decor</h3><p>15,5 x 9,5 cm · a linha pontilhada</p><div class="x">1x<small>consumo igual ao de hoje</small></div></div>
@@ -414,7 +453,7 @@ body.tem-mouse #cursor{display:block}
     <li><b>Menos lâminas por folha</b>Mais capa, mais impressão e mais hora de máquina em cada lote.</li>
     <li><b>Reduzir também não serve</b>Estampa do Sign perde leitura. O Decor perde espaço de informação.</li>
   </ul>
-  <div class="virada anima d3"><strong>O problema é o expositor.</strong>Trocar o expositor mexe em um lote. Trocar o catálogo mexe em 90.000 unidades e nas capas que já estão prontas.</div>
+  <div class="virada anima d3"><strong>O problema é o expositor.</strong>Trocar o expositor mexe em um lote. Trocar o catálogo mexe em 90.000 unidades e em R$ 331 mil de capas que já estão prontas.</div>
   <p class="fonte">Fonte: área de corte medida nos arquivos de produção dos catálogos 2026, em escala nesta tela; gráfica, reunião de 28/10/2026.</p>
   <div class="grao"></div>
   <aside hidden>As lâminas estão em escala. Levar tudo para o formato Decor faz o Sign consumir mais que o dobro. A saída é adaptar o expositor.</aside>
@@ -422,7 +461,7 @@ body.tem-mouse #cursor{display:block}
 
 <!-- 08 manuseio -->
 <section class="slide escuro manuseio" data-t="Manuseio">
-  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-paper.png" alt="75 LAB"></div><span class="eb"><b>(07)</b> Ideia 4 · Manuseio separado</span></div>
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-paper.png" alt="75 LAB"></div><span class="eb"><b>(08)</b> Ideia 4 · Manuseio separado</span></div>
   <h2 class="anima">Separar o manuseio <span class="cl">é caminho sem volta.</span></h2>
   <div class="raia r1 anima d1">
     <div class="nome">Na mesma linha<small>como é hoje</small></div>
@@ -452,14 +491,14 @@ body.tem-mouse #cursor{display:block}
 
 <!-- 09 caminhos -->
 <section class="slide claro caminhos" data-t="Três caminhos">
-  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(08)</b> Três caminhos</span></div>
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(09)</b> Três caminhos</span></div>
   <h2 class="anima">Três caminhos. <span class="ap">Só um dá</span> <span class="ca">preço e ritmo.</span></h2>
   <div class="gt anima d1">
     <div class="cab"><span></span><div class="ms"><span>nov/26</span><span>dez</span><span>jan/27</span><span>fev</span><span>mar</span><span>abr</span><span>mai</span><span>jun</span><span>jul</span></div><span></span></div>
     <div class="ln">
       <div class="rot"><span>Caminho A</span><b>O que a Alltak pediu</b></div>
       <div class="tr"><div class="sg pr t1" style="left:0;width:22.22%">Material parado</div><div class="sg pr t1" style="left:22.22%;width:33.33%">Reorçar, bobina e impressão</div><div class="sg nv t1" style="left:55.55%;width:44.45%">7.500 por mês, preço novo</div><div class="sg nv t2" style="left:22.22%;width:77.78%">Contrato novo de 90.000: o saldo entra aqui</div></div>
-      <dl><dt>Preço</dt><dd>Todo o saldo reaberto</dd><dt>Ritmo</dt><dd>Abril de 2027</dd><dt>O que pesa</dt><dd><strong>R$ 55 mil a R$ 179 mil a mais</strong> e capas paradas</dd></dl>
+      <dl><dt>Preço</dt><dd>Todo o saldo reaberto</dd><dt>Ritmo</dt><dd>Abril de 2027</dd><dt>O que pesa</dt><dd><strong>R$ 55 mil a R$ 229 mil a mais</strong> e capas paradas</dd></dl>
     </div>
     <div class="ln">
       <div class="rot"><span>Caminho B</span><b>O que o fornecedor trouxe</b></div>
@@ -472,14 +511,14 @@ body.tem-mouse #cursor{display:block}
       <dl><dt>Preço</dt><dd>Lote atual travado, preço novo só no novo lote</dd><dt>Ritmo</dt><dd>Abril de 2027</dd><dt>O que pesa</dt><dd><strong>Lote atual e setup</strong> correm juntos até março</dd></dl>
     </div>
   </div>
-  <p class="fonte">Fontes: proposta da Alltak; gráfica, reunião de 28/10/2026; simulação da tela 5. Caminho A considera bobina em janeiro. Prazos dependem da chegada das bobinas.</p>
+  <p class="fonte">Fontes: proposta da Alltak; gráfica, reunião de 28/10/2026; simulação da tela 6. Caminho A considera bobina em janeiro. Prazos dependem da chegada das bobinas.</p>
   <div class="grao"></div>
   <aside hidden>No caminho C o lote atual termina em março, o novo lote se negocia em dezembro, janeiro a março são de setup e a entrega regular começa em abril. É a mesma data do pedido de vocês, com o saldo no preço de hoje.</aside>
 </section>
 
 <!-- 10 fim -->
 <section class="slide lime fim" data-t="Decisões">
-  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(09)</b> Próximo passo</span></div>
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(10)</b> Próximo passo</span></div>
   <div class="esq">
     <h2 class="anima">Fechamos até março?</h2>
     <p class="lead anima d1">O lote atual ganha dois meses além do calendário original. Em dezembro negociamos o novo lote, de janeiro a março fazemos o setup e, em abril, começa a entrega regular que vocês pediram.</p>
@@ -592,12 +631,13 @@ function pinta(){
   var p=+rg.value;
   $("#rsMais").textContent="+ R$ "+fmt(BASE*p/100);
   $("#rsPct").textContent="com "+String(p).replace(".",",")+"%";
-  rg.style.background="linear-gradient(90deg,var(--azul) "+(p/15*100)+"%,var(--paper-2) "+(p/15*100)+"%)";
+  $("#rsTot").textContent="+ R$ "+fmt(BASE*p/100+331000);
+  rg.style.background="linear-gradient(90deg,var(--azul) "+(p/25*100)+"%,var(--paper-2) "+(p/25*100)+"%)";
 }
 rg.addEventListener("input",function(){mexeu=true;clearInterval(tim);pinta()});
 function autoSim(){
   if(mexeu)return;clearInterval(tim);rg.value=0;pinta();var v=0;
-  tim=setInterval(function(){v+=.5;rg.value=v;pinta();if(v>=10)clearInterval(tim)},70);
+  tim=setInterval(function(){v=Math.min(19.2,Math.round((v+.8)*10)/10);rg.value=v;pinta();if(v>=19.2)clearInterval(tim)},60);
 }
 pinta();
 
