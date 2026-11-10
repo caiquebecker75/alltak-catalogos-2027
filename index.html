@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<meta id="versaoDeck" content="9">
+<meta id="versaoDeck" content="10">
 <title>Alltak × 75 LAB · Primeiro fechar. Depois crescer.</title>
 <meta name="description" content="Catálogos Alltak: por que terminar o lote atual até março é o caminho mais barato para o novo lote.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -302,12 +302,16 @@ body.tem-mouse #cursor{display:block}
 .rende .lam{margin-top:16px;font:400 12px/1.45 var(--mono);opacity:.75}
 .rende .ped{position:absolute;left:1070px;right:96px;top:262px;background:#fff;border-top:6px solid var(--azul);padding:18px 22px 16px}
 .rende .ped .eb{display:block;margin-bottom:6px}
-.rende .lin2{padding:14px 0;border-bottom:2px solid var(--fio)}
+.rende .lin2{padding:9px 0;border-bottom:2px solid var(--fio)}
 .rende .lin2:last-of-type{border-bottom:0}
 .rende .lin2 small{font:700 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;opacity:.7}
-.rende .lin2 .num{font-size:46px;line-height:1;margin:2px 0 4px;color:var(--ink)}
+.rende .lin2 .num{font-size:38px;line-height:1;margin:2px 0 3px;color:var(--ink)}
 .rende .lin2 .num em{font-style:normal;color:var(--azul)}
-.rende .lin2 p{font-size:14.5px;line-height:1.32}
+.rende .lin2 p{font-size:14px;line-height:1.3}
+.rende .lin2.pede{background:var(--lime);margin:4px -22px 0;padding:10px 22px;border-bottom:0}
+.rende .lin2.pede .num em{color:var(--ink)}
+.rende .lin2.pede .rolos i{background:var(--ink)}
+.rende .lin2.pede .rolos i.f{background:transparent;border-color:var(--ink)}
 .rende .rolos{display:flex;gap:4px;margin-top:6px}
 .rende .rolos i{width:14px;height:20px;border-radius:3px;background:var(--azul);opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s}
 .rende .rolos i.f{background:transparent;border:2px dashed var(--azul)}
@@ -424,13 +428,14 @@ body.tem-mouse #cursor{display:block}
   </div>
   <div class="ped anima d3">
     <span class="eb">Quanto pedir de bobina, por cor</span>
+    <div class="lin2 pede"><small>Agora · fechar os 1.736</small><div class="num"><em>2</em> bobinas</div><div class="rolos"><i style="transition-delay:.50s"></i><i style="transition-delay:.56s" class="f"></i></div><p>Uma bobina de 25 m rende 1.326. Para 1.736 são 33 m: vale a segunda bobina, e a sobra entra no lote atual.</p></div>
     <div class="lin2"><small>Fechar 15.000 catálogos</small><div class="num"><em>12</em> bobinas</div><div class="rolos"><i style="transition-delay:0.50s"></i><i style="transition-delay:0.56s"></i><i style="transition-delay:0.62s"></i><i style="transition-delay:0.68s"></i><i style="transition-delay:0.74s"></i><i style="transition-delay:0.80s"></i><i style="transition-delay:0.86s"></i><i style="transition-delay:0.92s"></i><i style="transition-delay:0.98s"></i><i style="transition-delay:1.04s"></i><i style="transition-delay:1.10s" class="f"></i><i style="transition-delay:1.16s" class="f"></i></div><p>A primeira leva veio com 10 e parou em 13.264. Faltaram 2.</p></div>
     <div class="lin2"><small>Novo lote · 2.500 por mês</small><div class="num"><em>2</em> por mês</div><div class="rolos"><i style="transition-delay:0.50s"></i><i style="transition-delay:0.56s"></i></div><p>Um rolo e nove décimos, arredondado para cima.</p></div>
     <div class="lin2"><small>Novo lote · 30.000 por ano</small><div class="num"><em>23</em> bobinas</div><p>Por cor, no ano. Com 104 cores, cerca de 2.350 bobinas.</p></div>
   </div>
   <p class="fonte">Fonte: notas de remessa para industrialização da Alltak para a 75 LAB, abril a junho de 2026: 6 notas autorizadas, 104 cores Decor, 25.990 m e 1.001 rolos, contra 13.264 catálogos Decor entregues. Rendimento do Sign e do Wraps fecha na mesma conta quando o lote rodar inteiro.</p>
   <div class="grao"></div>
-  <aside hidden>Esta é a conta que faltava. Cada bobina de 25 m rende 1.326 catálogos Decor. Para 15 mil são 12 bobinas por cor; vieram 10, por isso faltaram 1.736.</aside>
+  <aside hidden>Esta é a conta que faltava. Cada bobina de 25 m rende 1.326 catálogos Decor. Para 15 mil são 12 bobinas por cor; vieram 10, por isso faltaram 1.736. Para não travar de novo, a reposição precisa de 2 bobinas por cor que zerou, não 1. A sobra não se perde: entra no lote atual.</aside>
 </section>
 
 <!-- 04 momento -->
@@ -599,7 +604,7 @@ body.tem-mouse #cursor{display:block}
   </div>
   <div class="dirr">
     <div class="chk-h anima"><span class="eb">Quatro decisões</span><span class="cta"><svg><use href="#i-mao"/></svg>Clique para marcar</span></div>
-    <button class="chk anima d1"><i><svg><use href="#i-ok"/></svg></i><div><small>Novembro · Alltak</small><b>Cronograma de bobinas</b><span>Lâminas do Decor saindo agora. Para o lote atual, 12 bobinas de 25 m por cor; rolos que sobram entram, com m² na etiqueta.</span></div></button>
+    <button class="chk anima d1"><i><svg><use href="#i-ok"/></svg></i><div><small>Novembro · Alltak</small><b>Cronograma de bobinas</b><span>Reposição do Decor com 2 bobinas por cor que zerou, não 1: a sobra entra no lote atual. Para o lote atual, 12 bobinas de 25 m por cor, com m² na etiqueta.</span></div></button>
     <button class="chk anima d1"><i><svg><use href="#i-ok"/></svg></i><div><small>Novembro · Alltak e 75 LAB</small><b>Faturar o que está pronto</b><span>Os 1.736 do Decor faturam já, com nota de remessa futura, e são entregues quando a lâmina chegar. As capas impressas seguem o mesmo caminho.</span></div></button>
     <button class="chk anima d2"><i><svg><use href="#i-ok"/></svg></i><div><small>Dezembro · Alltak e 75 LAB</small><b>Aditivo até março</b><span>Lote atual com mesmo escopo e mesmo preço, dois meses além do calendário.</span></div></button>
     <button class="chk anima d2"><i><svg><use href="#i-ok"/></svg></i><div><small>Dezembro · Alltak e 75 LAB</small><b>Novo lote negociado</b><span>Com a alíquota já fixada: 90.000 em 12 meses, 2.500 por modelo, revisão anual, formatos e expositor resolvidos. Setup de janeiro a março.</span></div></button>
