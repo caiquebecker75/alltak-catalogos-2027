@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<meta id="versaoDeck" content="10">
+<meta id="versaoDeck" content="11">
 <title>Alltak × 75 LAB · Primeiro fechar. Depois crescer.</title>
 <meta name="description" content="Catálogos Alltak: por que terminar o lote atual até março é o caminho mais barato para o novo lote.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -317,6 +317,38 @@ body.tem-mouse #cursor{display:block}
 .rende .rolos i.f{background:transparent;border:2px dashed var(--azul)}
 .slide.on.rende .rolos i{opacity:1;transform:none}
 .pdf .rende .rolos i{opacity:1;transform:none}
+
+/* 15 mil catálogos: quantas bobinas */
+.leva h2{position:absolute;left:96px;top:100px;font-size:74px;width:1408px}
+.leva .eq{position:absolute;left:96px;right:96px;top:250px;display:grid;grid-template-columns:1fr 40px 1fr 40px 1fr 40px 1fr 40px 1.3fr;align-items:stretch}
+.leva .eq .op{display:grid;place-items:center;font-family:var(--titulo);font-weight:900;font-size:40px;color:var(--azul)}
+.leva .eq .bx{border-top:4px solid var(--ink);padding:12px 0 0}
+.leva .eq .bx small{font:700 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:6px}
+.leva .eq .bx .num{font-size:60px;line-height:.9}
+.leva .eq .bx span{display:block;font-size:14px;line-height:1.3;margin-top:6px}
+.leva .eq .bx.fim{background:var(--azul);color:#fff;border-top-color:var(--azul);padding:12px 18px 14px}
+.leva .eq .bx.fim .num{font-size:78px}
+.leva .cor{position:absolute;left:96px;top:470px;width:760px}
+.leva .cor .eb{display:block;margin-bottom:12px}
+.leva .pilha{display:flex;align-items:flex-end;gap:8px;height:150px;border-bottom:3px solid var(--ink)}
+.leva .pilha i{flex:1;height:0;background:var(--ink);position:relative;transition:height .6s cubic-bezier(.2,.7,.2,1)}
+.leva .pilha i.n{background:var(--lime);outline:2px solid var(--ink);outline-offset:-2px}
+.leva .pilha i em{position:absolute;bottom:-24px;left:0;right:0;text-align:center;font:700 11px var(--mono);font-style:normal}
+.slide.on.leva .pilha i,.pdf .leva .pilha i{height:var(--h)}
+.leva .cor .leg{display:flex;gap:26px;margin-top:34px;font-size:15px;line-height:1.35}
+.leva .cor .leg b{display:inline-block;width:14px;height:14px;margin-right:8px;vertical-align:-2px}
+.leva .cor p.fol{margin-top:12px;font-size:15px;line-height:1.38}
+.leva .tab{position:absolute;left:920px;right:96px;top:470px}
+.leva .tab .eb{display:block;margin-bottom:10px}
+.leva .tab .h,.leva .tab .r{display:grid;grid-template-columns:1.2fr 1fr 1fr;align-items:end}
+.leva .tab .h span{font:700 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;padding-bottom:8px;border-bottom:3px solid var(--ink)}
+.leva .tab .h span:last-child{color:var(--azul)}
+.leva .tab .r{border-bottom:2px solid var(--fio);padding:10px 0}
+.leva .tab .r b{font-size:15px;font-weight:600}
+.leva .tab .r strong{font-family:var(--titulo);font-weight:900;font-size:32px;line-height:1}
+.leva .tab .r strong.n{color:var(--azul)}
+.leva .tab .ob{margin-top:14px;font-size:14px;line-height:1.38}
+.leva .tab .ob b{font:700 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:3px}
 </style>
 </head>
 <body>
@@ -374,15 +406,15 @@ body.tem-mouse #cursor{display:block}
   <h2 class="anima">A intenção é certa: previsibilidade.<br><span>O caminho é que sai caro.</span></h2>
   <div class="ideias-h anima d1"><span class="eb" style="color:var(--ink)">Levamos cada ideia para a gráfica. A resposta:</span><span class="cta" style="color:var(--ink)"><svg><use href="#i-mao"/></svg>Clique para ver a conta de cada ideia</span></div>
   <div class="ideias anima d2">
-    <button class="ideia" data-ir="7"><span>Ideia 1</span><b>Zerar e recomeçar em janeiro</b><em class="vd" style="font-style:normal">Não compensa</em>
+    <button class="ideia" data-ir="8"><span>Ideia 1</span><b>Zerar e recomeçar em janeiro</b><em class="vd" style="font-style:normal">Não compensa</em>
       <dl><dt><i>+</i>Vantagem</dt><dd>Um contrato só e parcela mensal fixa desde o começo.</dd><dt><i>−</i>Desvantagem</dt><dd>Reabre o preço do saldo com dissídio, dólar e imposto novos. Capas prontas ficam paradas e a primeira entrega regular continua em abril.</dd></dl><span class="ver cta">Ver a conta</span></button>
-    <button class="ideia" data-ir="8"><span>Ideia 2</span><b>2.500 por modelo já em janeiro</b><em class="vd" style="font-style:normal">Viável a partir de abril</em>
+    <button class="ideia" data-ir="9"><span>Ideia 2</span><b>2.500 por modelo já em janeiro</b><em class="vd" style="font-style:normal">Viável a partir de abril</em>
       <dl><dt><i>+</i>Vantagem</dt><dd>Abastecimento sem janelas e custo previsível no financeiro. A gráfica confirma o ritmo.</dd><dt><i>−</i>Desvantagem</dt><dd>Janeiro não é possível: a bobina precisa de cerca de 3 meses até virar entrega. Pede remessa inicial para uns 10 mil catálogos.</dd></dl><span class="ver cta">Ver a conta</span></button>
-    <button class="ideia" data-ir="9"><span>Ideia 3</span><b>Todos no formato do Decor</b><em class="vd" style="font-style:normal">Sai mais caro</em>
+    <button class="ideia" data-ir="10"><span>Ideia 3</span><b>Todos no formato do Decor</b><em class="vd" style="font-style:normal">Sai mais caro</em>
       <dl><dt><i>+</i>Vantagem</dt><dd>Um único expositor serve para todos os catálogos.</dd><dt><i>−</i>Desvantagem</dt><dd>Sign consome 2,3x mais bobina e Wraps 1,6x, e a bobina é da Alltak. E R$ 331 mil de capas prontas deixam de servir.</dd></dl><span class="ver cta">Ver a conta</span></button>
-    <button class="ideia" data-ir="10"><span>Ideia 4</span><b>Manuseio dentro do grupo Alko</b><em class="vd" style="font-style:normal">Caminho sem volta</em>
+    <button class="ideia" data-ir="11"><span>Ideia 4</span><b>Manuseio dentro do grupo Alko</b><em class="vd" style="font-style:normal">Caminho sem volta</em>
       <dl><dt><i>+</i>Vantagem</dt><dd>Aproveita a mão de obra que o grupo já tem. O ganho ainda depende do custo por etapa.</dd><dt><i>−</i>Desvantagem</dt><dd>A impressão é planejada para o acabamento. Intercalar uma a uma perde produtividade, e voltar para a linha custa mais que a economia.</dd></dl><span class="ver cta">Ver a conta</span></button>
-    <button class="ideia" data-ir="12"><span>Ideia 5</span><b>Usar rolos que sobram</b><em class="vd sim" style="font-style:normal">Aprovado</em>
+    <button class="ideia" data-ir="13"><span>Ideia 5</span><b>Usar rolos que sobram</b><em class="vd sim" style="font-style:normal">Aprovado</em>
       <dl><dt><i>+</i>Vantagem</dt><dd>Escoa rolos com falha de produção, que não iriam para a venda, e ainda vira catálogo.</dd><dt><i>−</i>Desvantagem</dt><dd>Nenhuma, com duas regras: todos na mesma largura e com os metros quadrados na etiqueta de cada rolo.</dd></dl><span class="ver cta">Ver as decisões</span></button>
   </div>
   <p class="fonte" style="color:var(--ink)">Fonte: gráfica, reunião de 28/10/2026; arquivos de produção dos catálogos 2026.</p>
@@ -438,9 +470,43 @@ body.tem-mouse #cursor{display:block}
   <aside hidden>Esta é a conta que faltava. Cada bobina de 25 m rende 1.326 catálogos Decor. Para 15 mil são 12 bobinas por cor; vieram 10, por isso faltaram 1.736. Para não travar de novo, a reposição precisa de 2 bobinas por cor que zerou, não 1. A sobra não se perde: entra no lote atual.</aside>
 </section>
 
+<!-- leva 15 mil -->
+<section class="slide claro leva" data-t="Bobinas para 15 mil">
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(05)</b> Bobinas para 15 mil</span></div>
+  <h2 class="anima">15 mil catálogos Decor <span class="ca">pedem 1.248 bobinas.</span></h2>
+  <div class="eq anima d1">
+    <div class="bx"><small>A meta</small><div class="num">15.000</div><span>catálogos Decor na próxima leva</span></div>
+    <div class="op">÷</div>
+    <div class="bx"><small>Rendimento real</small><div class="num">1.326</div><span>catálogos por bobina de 25 m</span></div>
+    <div class="op">=</div>
+    <div class="bx"><small>Por cor</small><div class="num">12</div><span>bobinas: a conta dá 11,3 e rolo não vem fracionado</span></div>
+    <div class="op">×</div>
+    <div class="bx"><small>Cores</small><div class="num">104</div><span>uma lâmina de cada em todo catálogo</span></div>
+    <div class="op">=</div>
+    <div class="bx fim"><small>Bobinas de 25 m</small><div class="num">1.248</div><span>31.200 m de adesivo, na gráfica ainda em novembro</span></div>
+  </div>
+  <div class="cor anima d2">
+    <span class="eb">Cada cor, bobina por bobina</span>
+    <div class="pilha"><i class="" style="--h:100%;transition-delay:0.40s"><em>1</em></i><i class="" style="--h:100%;transition-delay:0.47s"><em>2</em></i><i class="" style="--h:100%;transition-delay:0.54s"><em>3</em></i><i class="" style="--h:100%;transition-delay:0.61s"><em>4</em></i><i class="" style="--h:100%;transition-delay:0.68s"><em>5</em></i><i class="" style="--h:100%;transition-delay:0.75s"><em>6</em></i><i class="" style="--h:100%;transition-delay:0.82s"><em>7</em></i><i class="" style="--h:100%;transition-delay:0.89s"><em>8</em></i><i class="" style="--h:100%;transition-delay:0.96s"><em>9</em></i><i class="" style="--h:100%;transition-delay:1.03s"><em>10</em></i><i class="n" style="--h:100%;transition-delay:1.10s"><em>11</em></i><i class="n" style="--h:100%;transition-delay:1.17s"><em>12</em></i></div>
+    <div class="leg"><span><b style="background:var(--ink)"></b>As 10 que vieram na primeira leva</span><span><b style="background:var(--lime);outline:2px solid var(--ink);outline-offset:-2px"></b>As 2 que faltaram</span></div>
+    <p class="fol">300 m por cor rendem cerca de 15.900 catálogos. A folga de uns 900 cobre uma perda fora da média sem travar a linha de novo.</p>
+  </div>
+  <div class="tab anima d3">
+    <span class="eb">Primeira leva e próxima leva</span>
+    <div class="h"><span></span><span>Primeira</span><span>Próxima</span></div>
+    <div class="r"><b>Bobinas de 25 m</b><strong>1.001</strong><strong class="n">1.248</strong></div>
+    <div class="r"><b>Metros por cor</b><strong>250</strong><strong class="n">300</strong></div>
+    <div class="r"><b>Catálogos</b><strong>13.264</strong><strong class="n">15.000</strong></div>
+    <p class="ob"><b>Sign e Wraps</b>Sign: 150 m por material, como na leva que fechou 15 mil. Wraps: a conta fecha quando a primeira bobina rodar.</p>
+  </div>
+  <p class="fonte">Fonte: notas de remessa de bobina da Alltak, abril a junho de 2026, contra 13.264 catálogos Decor entregues (1.326 por bobina de 25 m). Primeira leva: 1.001 rolos físicos (rolos de 25, 40 e 50 m). Não inclui a reposição dos 1.736, que segue com 2 bobinas por cor que zerou.</p>
+  <div class="grao"></div>
+  <aside hidden>A resposta direta: para 15 mil catálogos Decor, 12 bobinas por cor, 1.248 no total. Da última vez vieram 10 por cor e a linha parou em 13.264.</aside>
+</section>
+
 <!-- 04 momento -->
 <section class="slide escuro momento" data-t="O momento">
-  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-paper.png" alt="75 LAB"></div><span class="eb"><b>(05)</b> O momento</span></div>
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-paper.png" alt="75 LAB"></div><span class="eb"><b>(06)</b> O momento</span></div>
   <h2 class="anima">Este é o pior momento <span class="cl">para reabrir o saldo.</span></h2>
   <div class="grafico anima d1">
     <div class="heroi"><div class="num">+8,4%</div><p><b>Dólar em duas semanas</b>, de R$ 5,04 para R$ 5,46. Parafusos e insumos importados acompanham.</p></div>
@@ -458,7 +524,7 @@ body.tem-mouse #cursor{display:block}
 
 <!-- 05 simulador -->
 <section class="slide claro simula" data-t="Zerar custa quanto">
-  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(06)</b> Ideia 1 · Zerar o contrato</span></div>
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(07)</b> Ideia 1 · Zerar o contrato</span></div>
   <h2 class="anima">Zerar troca um preço <span class="ca">travado</span> <span class="ap">por um preço em aberto.</span></h2>
   <div class="trav anima d1">
     <span class="eb"><b>Contrato ativo</b> · 61.736 catálogos</span>
@@ -490,7 +556,7 @@ body.tem-mouse #cursor{display:block}
 
 <!-- 06 prazo -->
 <section class="slide marinho prazo" data-t="2.500 por mês">
-  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-paper.png" alt="75 LAB"></div><span class="eb"><b>(07)</b> Ideia 2 · 2.500 por mês</span></div>
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-paper.png" alt="75 LAB"></div><span class="eb"><b>(08)</b> Ideia 2 · 2.500 por mês</span></div>
   <div class="esq">
     <h2 class="anima">Zerar em janeiro não adianta <span class="cl">nenhuma entrega.</span></h2>
     <div class="mes anima d1">Abril</div>
@@ -514,7 +580,7 @@ body.tem-mouse #cursor{display:block}
 
 <!-- 07 formatos -->
 <section class="slide claro formato" data-t="Formatos">
-  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(08)</b> Ideia 3 · Formato único</span></div>
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(09)</b> Ideia 3 · Formato único</span></div>
   <h2 class="anima">Mudar 90.000 catálogos <span class="ap">para caber em um expositor?</span> <span class="ca">A conta inverte.</span></h2>
   <div class="lams anima d1">
     <div class="lam"><div class="slot" style="border-color:transparent"><img src="assets/lam-decor.jpg" alt="Lâmina real do catálogo Decor" style="width:310px;height:191px"></div><h3>Decor</h3><p>15,5 x 9,5 cm · a linha pontilhada</p><div class="x">1x<small>consumo igual ao de hoje</small></div></div>
@@ -534,7 +600,7 @@ body.tem-mouse #cursor{display:block}
 
 <!-- 08 manuseio -->
 <section class="slide escuro manuseio" data-t="Manuseio">
-  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-paper.png" alt="75 LAB"></div><span class="eb"><b>(09)</b> Ideia 4 · Manuseio separado</span></div>
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-paper.png" alt="75 LAB"></div><span class="eb"><b>(10)</b> Ideia 4 · Manuseio separado</span></div>
   <h2 class="anima">Separar o manuseio <span class="cl">é caminho sem volta.</span></h2>
   <div class="raia r1 anima d1">
     <div class="nome">Na mesma linha<small>como é hoje</small></div>
@@ -564,7 +630,7 @@ body.tem-mouse #cursor{display:block}
 
 <!-- 09 caminhos -->
 <section class="slide claro caminhos" data-t="Três caminhos">
-  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(10)</b> Três caminhos</span></div>
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(11)</b> Três caminhos</span></div>
   <h2 class="anima">Três caminhos. <span class="ap">Só um dá</span> <span class="ca">preço e ritmo.</span></h2>
   <div class="gt anima d1">
     <div class="cab"><span></span><div class="ms"><span>nov/26</span><span>dez</span><span>jan/27</span><span>fev</span><span>mar</span><span>abr</span><span>mai</span><span>jun</span><span>jul</span></div><span></span></div>
@@ -591,7 +657,7 @@ body.tem-mouse #cursor{display:block}
 
 <!-- 10 fim -->
 <section class="slide lime fim" data-t="Decisões">
-  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(11)</b> Próximo passo</span></div>
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(12)</b> Próximo passo</span></div>
   <div class="esq">
     <h2 class="anima">Fechamos até março?</h2>
     <p class="lead anima d1">Os 1.736 do Decor estão prontos há dois meses e faturam já. O lote atual ganha dois meses além do calendário original. Em dezembro negociamos o novo lote, de janeiro a março fazemos o setup e, em abril, começa a entrega regular que vocês pediram.</p>
@@ -619,7 +685,7 @@ body.tem-mouse #cursor{display:block}
 </section>
 
   <div id="barra"><i></i></div>
-  <div id="nav"><button id="ant" aria-label="Tela anterior">‹</button><span id="cont">01 / 12</span><button id="prox" aria-label="Próxima tela">›</button></div>
+  <div id="nav"><button id="ant" aria-label="Tela anterior">‹</button><span id="cont">01 / 13</span><button id="prox" aria-label="Próxima tela">›</button></div>
 </div></div>
 <div id="cursor"></div>
 
